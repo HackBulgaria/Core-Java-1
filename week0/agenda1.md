@@ -21,13 +21,4 @@ C\:>javac -sodurce 1.6 -target 1.6 -bootclasspath C:\jdk1.6.0\lib\rt.jar ^
 - jar format 
 - Common VM Arguments
 
-### Agenda #2 ###
--Welcome to Eclipse
--Coding style format import
--Import Quick Keys setup
--Hello world from Eclipse
--Packages,Eclipse Views
--Primitive types, arrays
--if/for/while, switch
-
 
