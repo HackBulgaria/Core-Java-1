@@ -2,7 +2,6 @@
 ```java -version``` 
 
 ```javac -version```
-```javap -version```
 
 ```javap -version```
 
