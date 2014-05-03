@@ -1,7 +1,8 @@
-## Agenda for week 0 ##
+### Agenda #1 ###
 - Java, JRE, JVM, JDK
 - JSR, JCP
 - JSE, J2EE, J2ME
+- Sun, Oracle, Google
 - Cross-platform, compatibility
 - Javac
 - classpath
@@ -10,7 +11,7 @@
 C:\>javac -sourcepath src -classpath classes;lib\Banners.jar ^
             src\farewells\GoodBye.java -d classes
 //source and target explanations
-C\:>javac -source 1.6 -target 1.6 -bootclasspath C:\jdk1.6.0\lib\rt.jar ^
+C\:>javac -sodurce 1.6 -target 1.6 -bootclasspath C:\jdk1.6.0\lib\rt.jar ^
             -extdirs "" OldCode.java
 
 //bootclasspath option
@@ -19,3 +20,14 @@ C\:>javac -source 1.6 -target 1.6 -bootclasspath C:\jdk1.6.0\lib\rt.jar ^
 - the javadoc tool
 - jar format 
 - Common VM Arguments
+
+### Agenda #2 ###
+-Welcome to Eclipse
+-Coding style format import
+-Import Quick Keys setup
+-Hello world from Eclipse
+-Packages,Eclipse Views
+-Primitive types, arrays
+-if/for/while, switch
+
+
