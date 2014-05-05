@@ -1,39 +1,92 @@
-###Smallest multiple###
-Find the smallest (positive) number, that can be divided by each of the numbers from 1 to 10.
+###1. Is it an odd number?###
+```boolean isOdd(int n)```
+Return whether n is an odd number
 
-*Bonus* Find the smallest (positive) number, that can be divided by each of the numbers from 1 to 20.
+###2. Is N prime?###
+```boolean isPrime(int N)```
 
-###Find the largest integer palindrome number up to N###
-1234321 is a palindrome. You are given a number - N. 
+###3. Find the minimum element of an array###
+```int min(int... array)```
+
+###4. Find the kth minimal element of an array###
+```int kthMin(int k, int[] array)```
+
+###5. Find the average of the elements of an array###
+```int getAverage(int[] array);```
+
+###6. Double factorial###
+```long doubleFac(int n);```
+return 
+E.g. if n=3, => (3!)! = 6! = 720 
+
+###7. Kth factorial###
+```long kthFac(int k, int n);```
+Get the kthFactorial of n. k is guaranteed to be positive. 
+*Bonus* no "helper" methods, no recursion :)
+
+###8. Smallest multiple###
+```long getSmallestMultiple(int upperBound);```
+
+Find the smallest (positive) number, that can be divided by each of the numbers from 1 to *upperBound*.
+
+###9. Find the largest integer palindrome number up to N###
+```long getLargestPalindrome(long N);```
+
+1234321 is a palindrome. You are given a number => *N*. 
 Find the largest number < N, that is a palindrome.
-Is there a smarter way to do this?
 
-###Find the max, min, and medium element in an array###
 *Bonus* do this without using Collections.sort
 
-###Find the greatest product of ten consecutive digits###
-73167176531330624919225119674426574742355349194934
-96983520312774506326239578318016984801869478851843
-85861560789112949495459501737958331952853208805511
-12540698747158523863050715693290963295227443043557
-66896648950445244523161731856403098711121722383113
-62229893423380308135336276614282806444486645238749
-30358907296290491560440772390713810515859307960866
-70172427121883998797908792274921901699720888093776
-65727333001053367881220235421809751254540594752243
-52584907711670556013604839586446706324415722155397
-53697817977846174064955149290862569321978468622482
-83972241375657056057490261407972968652414535100474
-82166370484403199890008895243450658541227588666881
-16427171479924442928230863465674813919123162824586
-17866458359124566529476545682848912883142607690042
-24219022671055626321111109370544217506941658960408
-07198403850962455444362981230987879927244284909188
-84580156166097919133875499200524063689912560717606
-05886116467109405077541002256983155200055935729725
-71636269561882670428252483600823257530420752963450
+###10. Find the greatest product of N consecutive digits###
+```long getGreatestProduct(long N, short K);```
 
-is a big number. It has a lot of digits. 1000, to be precise. Find the biggest product of ten consecutive digits in the number :)
+You are given a large number => N. You are given a small number, K.
+Find the biggest product of K consecutive digits in N.
+E.g. K=98612, N=3, result = 9*8*6 = 432;
 
-###Grayscale image histogram###
-byte[] image = new byte[] {255,122,233,124,121,222,085,010,231,111}4
+###11. Grayscale image histogram###
+```int[] histogram(short[][] image)``` 
+
+A histogram is a representation of distribution of some data.
+
+Here you receive a grayscale image matrix (*image*). Each of the matrix's values will be between 0 and 255.
+Return an array *result*, which is a histogram of *image* => the value of *result[i]* should be the ammount of times *i* is in the matrix *image*. 
+
+###12. Raise an integer to a power of another###
+```long pow(int a, int b)```
+
+Write a O(log(b)) solution.
+
+###13. Find the only number, that occurs odd times in an array###
+```int getOddOccurrence(int... array)```
+
+Every element in array will occur an even ammount of times.  There will be exactly one element
+Example: {1,2,2,1,3,4,3,4,4,6,5,6,5} => 4 occurs only an odd number of times.
+
+###14. Maximal scalar product###
+```long maximalScalarSum(int[] a, int[] b)```
+You are given two vectors, *a* and *b*. Let a be ```{a1,a2,a3}``` and b be ```{b1,b2,b3}```. The scalar product of vectors *a* and *b* is the number ```a1*b1 + a2*b2 + a3*b3``` 
+
+Find a permutation of a, and a permutation of b, for which their scalar product is the largest possible.  
+
+###15. Max span###
+```int maxSpan(int[] numbers)```
+Consider the leftmost and righmost appearances of some value in an array. We'll say that the "span" is the number of elements between the two inclusive. A single value has a span of 1. Returns the largest span found in the given array. 
+
+maxSpan({1, 2, 1, 1, 3}) → 4
+maxSpan({1, 4, 2, 1, 4, 1, 4}) → 6
+maxSpan({1, 4, 2, 1, 4, 4, 4}) → 6
+
+###16. Can balance?###
+```boolean canBalance(int[] numbers)```
+
+canBalance({1, 1, 1, 2, 1}) → true
+canBalance({2, 1, 1, 2, 1}) → false
+canBalance({10, 10}) → true
+
+Return true if there is an element in the array, where you can split the array in half and the sum of left side would be equal to the sum of the right part. 
+
+###17. Rescale an image using nearest neighbour interpolation###
+```int[][] rescale(int[][] original, int newWidth, int newHeight)```
+
+You are given an image *original*. Rescale it to newWidth, newHeight, using nearest neighbour interpolation. (See http://en.wikipedia.org/wiki/Nearest-neighbor_interpolation)
