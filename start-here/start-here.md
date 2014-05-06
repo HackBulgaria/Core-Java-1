@@ -35,4 +35,11 @@ javac 1.7.0_51
 https://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2-with-java8-patches
 Do not use your Linux distribution's Eclipse distribution. It would most likely be outdated.
 
+**4)** Read the Google style-guide for Java source code:
+http://google-styleguide.googlecode.com/svn/trunk/javaguide.html
 
+We will be using very similiar style guide, but with the following modifications:
+- 4 spaces for identation instead of 2.
+- 120 lines for line-wrapping instead of 80.
+
+Since the introduction of wide-screen monitors
