@@ -5,6 +5,7 @@ Welcome :)
 Here are a few things you  should probably get done before the start of the core java course:
 
 **1)** Install JDK 7
+
 *Windows:* use Oracle's JDK from http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
 or 
 
