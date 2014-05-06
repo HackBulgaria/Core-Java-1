@@ -83,3 +83,6 @@ Return true if there is an element in the array, where you can split the array i
 ```int[][] rescale(int[][] original, int newWidth, int newHeight)```
 
 You are given an image *original*. Rescale it to newWidth, newHeight, using nearest neighbour interpolation. (See http://en.wikipedia.org/wiki/Nearest-neighbor_interpolation)
+
+###17. Sudoku ###
+Source: Hack this site
