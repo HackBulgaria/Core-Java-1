@@ -27,7 +27,7 @@ OpenJDK Server VM (build 24.45-b08, mixed mode)
 ```
 ```
 javac -version
-
+t
 javac 1.7.0_51
 ```
 
@@ -42,3 +42,8 @@ We will be using very similiar style guide, but with the following modifications
 - 4 spaces for identation instead of 2.
 - 120 lines for line-wrapping instead of 80.
 
+**5)** Import eclipse preferences (the .epf file) in Eclipse
+`File->Import->General->Preferences`
+
+**6)** Import the code formatter (the .xml file) in Eclipse
+`Window->Preferences-> Write 'Format' in the search field up left-> Select the one below 'Java' -> Click on Import`
