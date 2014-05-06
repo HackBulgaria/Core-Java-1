@@ -42,4 +42,3 @@ We will be using very similiar style guide, but with the following modifications
 - 4 spaces for identation instead of 2.
 - 120 lines for line-wrapping instead of 80.
 
-Since the introduction of wide-screen monitors
