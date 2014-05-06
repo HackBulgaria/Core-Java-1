@@ -20,12 +20,14 @@ and that they are **the same version**
 
 ```
 java -version
+
 java version "1.7.0_51"
 OpenJDK Runtime Environment (IcedTea 2.4.4) (7u51-2.4.4-0ubuntu0.12.04.2)
 OpenJDK Server VM (build 24.45-b08, mixed mode)
 ```
 ```
 javac -version
+
 javac 1.7.0_51
 ```
 
