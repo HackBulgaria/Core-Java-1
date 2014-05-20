@@ -27,7 +27,6 @@ OpenJDK Server VM (build 24.45-b08, mixed mode)
 ```
 ```
 javac -version
-t
 javac 1.7.0_51
 ```
 
@@ -47,3 +46,17 @@ We will be using very similiar style guide, but with the following modifications
 
 **6)** Import the code formatter (the .xml file) in Eclipse
 `Window->Preferences-> Write 'Format' in the search field up left-> Select the one below 'Java' -> Click on Import`
+
+**7)** Create yourself a GitHub account!
+If you have never worked with git or GitHub, see the excellent article from
+HackBulgaria's programming 101 course:
+https://github.com/HackBulgaria/Programming101/tree/master/week1/git.md
+
+##But why aren't we using java 8 VM?##
+Because the community is ready: 
+- Eclipse is not exactly java8 ready: http://www.eclipse.org/downloads/java8/
+- Maven and m2eclipse are not java8 ready : https://bugs.eclipse.org/bugs/show_bug.cgi?id=420848
+- Ant in Eclipse is not java8 ready: http://wiki.eclipse.org/Ant/Java8
+- No deployment packages for OpenJDK 8 for most Linux distributions.
+
+And so on and so on. You will likely run into quite some problems, as the community is not ready with the tooling, support and guidance. Of course, one  can install java 8 vm and take it for a test-drive, but serious development needs tools. And at the present moment, they are in transition. Give it a little time. 
