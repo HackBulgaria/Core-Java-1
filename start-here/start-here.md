@@ -53,7 +53,7 @@ HackBulgaria's programming 101 course:
 https://github.com/HackBulgaria/Programming101/tree/master/week1/git.md
 
 ##But why aren't we using java 8 VM?##
-Because the community is ready: 
+Because the community is not quite ready: 
 - Eclipse is not exactly java8 ready: http://www.eclipse.org/downloads/java8/
 - Maven and m2eclipse are not java8 ready : https://bugs.eclipse.org/bugs/show_bug.cgi?id=420848
 - Ant in Eclipse is not java8 ready: http://wiki.eclipse.org/Ant/Java8
