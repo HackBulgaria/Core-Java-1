@@ -1,3 +1,5 @@
+###Recap of what we did the last time:###
+
 *The 'git/github'/recap article (if you are not familiar with git/github)*
 https://github.com/HackBulgaria/Programming101/blob/master/week1/git.md
 
@@ -27,7 +29,12 @@ http://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html
 
 *On Control flow - if, for, while, do-while, switch*
 http://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html
--------------------------------------------------------------------
+
+
+
+###For our second meeting : ) ###
+
+
 *Wrapper Classes*
 http://en.wikipedia.org/wiki/Primitive_wrapper_class
 
