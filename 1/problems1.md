@@ -83,3 +83,52 @@ Return true if there is an element in the array, where you can split the array i
 ```int[][] rescale(int[][] original, int newWidth, int newHeight)```
 
 You are given an image *original*. Rescale it to newWidth, newHeight, using nearest neighbour interpolation. (See http://en.wikipedia.org/wiki/Nearest-neighbor_interpolation)
+
+
+###17. Reverse a String###
+`String reverseMe(String argument)`
+
+###18. Reverse each word in a String###
+`String reverseEveryChar(String arg)`
+
+`reverseEveryChar("What is this") => tahW si siht`
+
+###18. Is this string a palindrome###
+`boolean isPalindrome(String argument)`
+
+###19. Is this number a palindrome###
+`boolean isPalindrome(int argument)`
+
+
+###18. Copy every character K times ###
+`String copyEveryChar(String input, int k)`
+
+`copyEveryChar("tldr", 3) => "tttllldddrrr"`
+
+###19. Check for palindrome length around '*' ###
+`int getPalindromeLength(String input)`
+
+`getPalindromeLength("taz*zad") => 2`
+
+###20. Count number of (non-overlapping) occurences ###
+`int countOcurrences(String needle, String haystack)`
+`countOcurrences("da", "daaadaadada") => 4`
+
+*Bonus* Only 1 line of code allowed. No loops :)
+
+###21. Sum all the numbers in a String###
+`int sumOfNumbers(String input)`
+
+Sum all of the numbers in the String. Ignore the characters.
+`sumOfNumbers("abc123dd34") => 157`
+`sumOfNumbers("12 99 1) => 112`
+
+###22. Is String A an anagram of String B?###
+`boolean anagram(String A, String B)`
+See http://en.wikipedia.org/wiki/Anagram
+
+No HashMaps, hashSets, or such stuff allowed : )
+
+###23. Is an anagram of String A a susbstring in B?###
+`boolean hasAnagramOf(A,B)` 
+Return whether an anagram of String A can be found in String B.
