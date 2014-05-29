@@ -147,7 +147,7 @@ Sum all of the numbers in the String. Ignore the characters.
 See http://en.wikipedia.org/wiki/Anagram
 
 No HashMaps, hashSets, or such stuff allowed : )
-
+Note: The last unit test is a *faulty* one. Delete it. (My bad).
 ###24. Is an anagram of String A a susbstring in B?###
 `boolean hasAnagramOf(A,B)` 
 Return whether an anagram of String A can be found in String B.
