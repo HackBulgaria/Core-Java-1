@@ -1,7 +1,7 @@
 ###Attaching JDK 7 sources to Eclipse###
 
 1. First, download the sources zip from 
-https://github.com/HackBulgaria/Core-Java-1/blob/master/Sources/OpenJDK/openjdk-7-fcs-src-b147-27_jun_2011.zip
+http://www.java.net/download/openjdk/jdk7/promoted/b147/openjdk-7-fcs-src-b147-27_jun_2011.zip
 
 2. Window -> Prefernces ->  Java -> Installed JRES.
 Select your active one and click 'Edit'
