@@ -12,7 +12,7 @@ Return whether n is an odd number
 ```int kthMin(int k, int[] array)```
 *There will be no duplicates in the array. If they are duplicates in the test, ignore them (my bad).*
 
-###5. Find the average of the elements of an array###
+###5. Find the average(средно аритметично) of the elements of an array###
 ```int getAverage(int[] array);```
 
 ###6. Double factorial###
