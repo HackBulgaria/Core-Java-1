@@ -105,6 +105,13 @@ You are given an image *original*. Rescale it to newWidth, newHeight, using near
 `String copyEveryChar(String input, int k)`
 
 `copyEveryChar("tldr", 3) => "tttllldddrrr"`
+Important Note: There is an error in the unit test.
+If you are failing on this line:
+`assertEquals("ttt   www   rrr", problems2.copyEveryChar("t w r", 2));`
+It is because is shoud be "3" instead of "2" as an argument at the end. 
+(My bad).
+
+
 
 ###19. Check for palindrome length around '*' ###
 `int getPalindromeLength(String input)`
