@@ -116,19 +116,30 @@ You are given an image *original*. Rescale it to newWidth, newHeight, using near
 
 *Bonus* Only 1 line of code allowed. No loops :)
 
-###21. Sum all the numbers in a String###
+###21. Decode an URL ###
+Input 'kitten%20pic.jpg'
+Output 'kitten pic.jpg'
+%20=>' '
+%3A=>':'
+%3D=>'?'
+%2F=>'/'
+`String decodeUrl(String input)`
+
+1 line of code is allowed. 
+
+###22. Sum all the numbers in a String###
 `int sumOfNumbers(String input)`
 
 Sum all of the numbers in the String. Ignore the characters.
 `sumOfNumbers("abc123dd34") => 157`
 `sumOfNumbers("12 99 1) => 112`
 
-###22. Is String A an anagram of String B?###
+###23. Is String A an anagram of String B?###
 `boolean anagram(String A, String B)`
 See http://en.wikipedia.org/wiki/Anagram
 
 No HashMaps, hashSets, or such stuff allowed : )
 
-###23. Is an anagram of String A a susbstring in B?###
+###24. Is an anagram of String A a susbstring in B?###
 `boolean hasAnagramOf(A,B)` 
 Return whether an anagram of String A can be found in String B.

@@ -47,6 +47,8 @@ public interface Problems2 {
 	
 	int countOcurrences(String needle, String haystack);
 	
+	String decodeURL(String input);
+	
 	int sumOfNumbers(String input);
 	
 	boolean areAnagrams(String A, String B);
