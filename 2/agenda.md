@@ -1,0 +1,5 @@
+- A little recap on our previous meetings 
+- How to debug in Eclipse
+- Debugging problems
+- Finish all String problems
+- Introduction to JUnit
