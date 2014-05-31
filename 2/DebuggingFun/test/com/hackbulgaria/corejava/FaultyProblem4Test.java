@@ -43,7 +43,7 @@ public class FaultyProblem4Test {
 
         a = "Bearded Man";
         b = "Non-bearded Man";
-        assertTrue(FaultyProblem4.haveEqualSubstrings(a, b));
+        assertFalse(FaultyProblem4.haveEqualSubstrings(a, b));
 
         a = "Speaks";
         b = "Freaky";
