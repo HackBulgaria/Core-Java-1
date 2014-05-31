@@ -1,3 +1,15 @@
+###Some debugging fun###
+1) Get latest changes from HackBulgaria repo
+`git pull` 
+or
+`git clone https://github.com/HackBulgaria/Core-Java-1.git`
+
+2) Import the DebuggingFun project in Eclipse
+- if you use 'import existing projects Eclipse it will not copy it in your workspace
+- if you use 'import from file system' 
+
+
+
 ###Implement a String join method### 
 Java does not have a String join method. Apache StringUtils does have, but, well, that's not an excuse.
 
