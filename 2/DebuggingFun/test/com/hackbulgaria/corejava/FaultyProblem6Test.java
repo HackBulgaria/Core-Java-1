@@ -11,7 +11,7 @@ public class FaultyProblem6Test {
         assertEquals(1, FaultyProblem6.pow(1, 999999999));
         assertEquals(8, FaultyProblem6.pow(2, 3));
         assertEquals(16, FaultyProblem6.pow(2, 4));
-        assertEquals(4, FaultyProblem6.pow(4, 0));
+        assertEquals(1, FaultyProblem6.pow(4, 0));
     }
 
 }

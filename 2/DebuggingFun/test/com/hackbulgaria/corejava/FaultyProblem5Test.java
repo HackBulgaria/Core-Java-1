@@ -12,7 +12,7 @@ public class FaultyProblem5Test {
         
         assertEquals(2, FaultyProblem5.kthFac(1, 2));
         
-        assertEquals(720, FaultyProblem5.kthFac(3, 3));
+        assertEquals(720, FaultyProblem5.kthFac(2, 3));
     }
 
 }
