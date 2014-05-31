@@ -6,7 +6,7 @@ public class FaultyProblem1 {
         if (Utils.isPalindrome(N)) {
             return N;
         } else {
-            return getLargestPalindrome(N);
+            return getLargestPalindrome(N-1);
         }
     }
 
