@@ -10,7 +10,16 @@ or
 
 
 
-###Implement a String join method### 
+###JUnit Hello world###
+Implement a method 'getNumberOfDigits(int)' which just counts the number of digits.
+
+1) Write the signature of the method
+2) Write the test, make sure it fails beautifully. Think of some edge cases.
+3) Implement the method
+4) Pass your own test! Woohoo!
+
+
+###Implement a join method### 
 Java does not have a String join method. Apache StringUtils does have, but, well, that's not an excuse.
 
 Make a method that joins strings, with a 'glue' given from the caller of your method.

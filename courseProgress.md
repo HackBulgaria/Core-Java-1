@@ -1,0 +1,20 @@
+- ~~Java, javac, jar, PATH, classpath, Java's ecosystem~~
+- ~~IDE's, Eclipse, Hello World~~
+- Linking and using libraries from Eclipse
+- ~~Debugging (level 1)~~
+- Debugging (level 2)
+- ~~Working with unit tests~~
+- Writing unit tests
+- OOP (level 1)
+- OOP (level 2)
+- OOP (level 3)
+- Working with Files
+- Defensive Programming
+- Working with XML and JSON
+- Network Programming
+- Multithreaded Programming
+- Working with annotations
+- Declaring annotations
+- Regular Expressions
+- Advanced IDE usages Level 1
+- Advanced IDE usages Level 2
