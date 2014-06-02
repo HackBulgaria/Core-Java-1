@@ -4,5 +4,6 @@
 - State/behaviour
 - Data Encapsulation, Subtype polymorphism, Liskov Principle
 - Object, equals, hashCode, getClass, toString, wait, notify, notifyAll
+- Constructors, on object construction in java, what happens on new()...
 - Subtyping (extending class)
 - interfaces/abstract classes
