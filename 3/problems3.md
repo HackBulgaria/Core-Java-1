@@ -10,7 +10,7 @@ Implement the toString method, to match the type of the class. For example, an o
 
 Make a class `Time` to hold information about the current time and *the current date* .
 
-Make an *easy-to-use* constructor (from client perspective), that would represent
+Make an *easy-to-use* constructor (from client perspective), that would represent the time and date the client wants to hold in your class.
 
 Implement the toString() method, returning the time and date in format : "hh:mm:ss dd.MM.YY". 
 
