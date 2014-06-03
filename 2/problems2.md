@@ -16,17 +16,18 @@ Implement a method 'getNumberOfDigits(int)' which just counts the number of digi
 
 1) Write the signature of the method  
 2) Write the test, make sure it fails beautifully. Think of some edge cases.  
-3) Implement the method  
+ 3) Implement the method  
 4) Pass your own test! Woohoo!  
 
 
 ###Implement a join method### 
 Java does not have a String join method. Apache StringUtils does have, but, well, that's not an excuse.
 
-Make a method that joins strings, with a 'glue' given from the caller of your method.
+Make a method that joins strings, with a **glue** given from the caller of your method.
 
 Can you think of a way for it to work with every object, not just string? Even primitives?
 
+//Glue is the first argument => " "
 `stichMeUp(" ", "Днес", "видях", 5, "ходещи", "медузи") => "Днес видях 5 ходещи медузи"` 
 
 1) Think of a good name for this method
