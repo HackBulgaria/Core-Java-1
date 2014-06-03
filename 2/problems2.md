@@ -9,14 +9,15 @@ or
 - if you use 'import from file system' 
 
 
+//The ProjectName for all of the three problems below should be 'TDDIntro'
 
 ###JUnit Hello world###
 Implement a method 'getNumberOfDigits(int)' which just counts the number of digits.
 
-1) Write the signature of the method
-2) Write the test, make sure it fails beautifully. Think of some edge cases.
-3) Implement the method
-4) Pass your own test! Woohoo!
+1) Write the signature of the method  
+2) Write the test, make sure it fails beautifully. Think of some edge cases.  
+3) Implement the method  
+4) Pass your own test! Woohoo!  
 
 
 ###Implement a join method### 
