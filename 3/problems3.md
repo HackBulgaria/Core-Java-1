@@ -84,7 +84,7 @@ See http://docstore.mik.ua/orelly/java-ent/jnut/ch03_11.htm
 
 ###9###
 Create a friendly interactive calculator in java
-Bundle, extecute and test your program as a jar file.
+Bundle, execute and test your program as a jar file.
 
 Example usage of your program:
 ```
