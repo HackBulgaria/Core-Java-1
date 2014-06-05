@@ -55,6 +55,8 @@ Implement your own `Stack` with your own `LinkedList` class : )
 *Bonus* implement a unique stack just as before, but using `LinkedList` and an *anonymous implementation*. 
 See http://www.programmerinterview.com/index.php/java-questions/java-anonymous-class-example/
 
+Return your anonymous implementation from a factory method
+
 ###8###
 Make a mutable class 'Matrix' represeting a NxM (integer) matrix. Think good about your constructors, your data. Your goal is to make this class as convenient as possible for the person using it.
 
