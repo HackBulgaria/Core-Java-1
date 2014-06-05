@@ -25,12 +25,13 @@ See http://en.wikipedia.org/wiki/Factory_method_pattern
 
 Make a class `Pair`, representing a pair of *Objects* (later we will revisit this with Generics)
 
-Create getter and setter methods for the first and second member of the pair.
+Create getter methods for the first and second member of the pair.
 http://stackoverflow.com/questions/2036970/how-do-getters-and-setters-work
 
 Implement the toString method, giving a meaningful representation of the class.
 Implement the equals method => two pairs are equal if both their members are equal.
 
+Make the class immutable.
 ###4###
 
 Create and implement a class `StackImpl`, representing a... well, stack. 
