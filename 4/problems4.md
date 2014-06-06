@@ -5,21 +5,32 @@ Such expression is correct if:
 - it starts with a '('
 - it ends with a ')'
 - the number of opening brackets equals exactly the number of closing brackets
+- at no point in the string the number of closing brackets is higher than the number of opening brackets. E.g. `())(()` is not a valid one, because at index 2 there is a second closing bracket with only one opening bracket. 
 
 TDD, of course.
+
+*Hint (and also spoiler)* 
+Is there a way you can use a *stack* in here?
  
-###Reverse a collection in-place###
+###Reverse a generic collection in-place###
 Declare a method, expecting a Collection of generalized type <? extends Object>, and reverse it in your method. In place.
 
 The argument you accept in your method should be like `Collection<? extends Object> argument`. Ask me about the question mark when you get here if I forget to explain the difference with Collection<Object>.
 
+*Do not try to use* Collections.reverse. It works only for a List, and not for collections : )
+
 
 ###Implement an on/off collection###
-Implement a Collection, in which, if you add an element twice, it gets removed from your collection.
-How would you handle null objects? :)
+Implement a Collection, in which, if you add an element twice, the element gets removed from your collection.
+
+*Hint and edge case spoiler:* How would you handle null objects? :)
+*Fun fact:*: As logical idea behind a collection is an abstraction of a... well, bunch of elements, allowing null actually makes no sense. 
+Note that the java implementations are broken on several places, allowing nulls to creep into the collections, making all kinds of havoc later on. Don't blindly follow the java implementations, do better.
+ 
 
 ###Make a bounded queue###
 A bounded queue is queue with a 'limit' of maximum elements.
+Your `BoundedQueue` class of course should implement the `Queue` interface. 
 Example usage of your `BoundedQueue` class:
 ```
 BoundedQueue<Integer> boundedQueue = new BoundedQueue<>(3);
@@ -33,19 +44,26 @@ System.out.println(boundedQueue.toString()); //3,4,5
 
 ###Rotate the elements of a collection###
 Make a *utility* method that rotates the contents of a collection. Do it *in place*.
+```
 You are given a collection containing [one, two, three, four, five, six, seven]
 "Rotating" it once means the collection becoming [seven, one, two, three, four, five, six]
-Make methods for rotating to the left and rotating to the right. 
 
-###Given a list of duplicate values, find the first unique element###
-Make a *utility* method, which returns the first unique element in a given argument of type `Collection<? extends Object>`.
+void rotate(Collection<? extends Object> collection, int rotateStep )
+rotateStep can be negative - meaning you are rotating to the left, and not to the right.
+```
+ 
 
-*Hint*
-Check out some of the methods in the `Set` interface in java : )
+###Given a list contaning some duplicate values, find the first unique element###
+Make a *utility* method, which returns the first unique element in a given argument of type `Collection<Integer>`.
+Example:
+```
+Collection<Integer> ints = Arrays.asList(1,2,3,4,5,5,4,3,1);
+System.out.println(yourMethod(ints)) //2;
+```
 
 
 ###Given several sets, find the duplicating elements###
-Write a *utility* method, that takes several sets, and returns a set that contains the duplicating elements of all the other sets
+Write a *utility* method, that takes several sets, and returns a set that contains the duplicating elements of all the other sets.
 
 A = {1,2,3,4,5}
 B = {4,5,6}
@@ -57,13 +75,6 @@ Lets say you have a `List<Student>`, where a Student is a class, containing two 
 Sort them by their grades first. Their grades actually are integers => 2,3,4,5,6. If two students happen to have the same grades, sort those two by their names.
 
 ```
-List<String> myList = Arrays.asList({"One", "Two", "Three", "Four", "Five", "One"});
-Map<String,Integer> occurencesMap = countOccurences(myList);
-//occurencesMap is like 
-// "One" => 2
-// "Two" => 1
-// "Three" => 1
-//etc 
 
 
 ###Give me the median, quick!###
@@ -81,10 +92,13 @@ I would also like to able to look through all the integers I've given you, with 
 
 So, as a client of your code, I will be adding some integers(just like in a list), and would want you to give me the mean, median, mode and range.
 
-*Bonus*
-Every method from `Statistics` interface should complete in O(1) time.
+*Bonus/Challenge*  
+Every method from `Statistics` interface should complete in O(1) time.   
+This is a little bit on the algorithm side, and you might need some interesting data structures : )
+Come back to this when you are done with all the tasks.
 
-*Hints*
+
+*Hints*  
 Solve this one *iteratively* with TDD.
 
 
