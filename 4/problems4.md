@@ -13,9 +13,11 @@ TDD, of course.
 Is there a way you can use a *stack* in here?
  
 ###Reverse a generic collection###
-Declare a method, expecting a Collection of generalized type <? extends Object>, and reverse it in your method. Return the same collection given, do not return a new collection!.
-
-The argument you accept in your method should be like `Collection<? extends Object> argument`. Ask me about the question mark when you get here if I forget to explain the difference with Collection<Object>.
+Declare a method, expecting a Collection and reverse it in your method. Return the same collection given, do not return a new collection!.
+Either use:
+`static <T> void  reverse (Collection<T> collection)`  
+or make it a concrete type:  
+`static void reverse(Collection<Integer> collection)`  
 
 *Do not try to use* Collections.reverse. It works only for a List, and not for collections : )
 
