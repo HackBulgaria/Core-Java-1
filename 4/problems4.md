@@ -45,12 +45,12 @@ System.out.println(boundedQueue.toString()); //3,4,5
 ```
 
 ###Rotate the elements of a collection###
-Make a *utility* method that rotates the contents of a collection. Do it *in place*.
+Make a void *utility* method that rotates the contents of a collection. 
 ```
 You are given a collection containing [one, two, three, four, five, six, seven]
 "Rotating" it once means the collection becoming [seven, one, two, three, four, five, six]
 
-void rotate(Collection<? extends Object> collection, int rotateStep )
+void rotate(Collection<Integer> collection, int rotateStep )
 rotateStep can be negative - meaning you are rotating to the left, and not to the right.
 ```
  
