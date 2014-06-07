@@ -12,8 +12,8 @@ TDD, of course.
 *Hint (and also spoiler)* 
 Is there a way you can use a *stack* in here?
  
-###Reverse a generic collection in-place###
-Declare a method, expecting a Collection of generalized type <? extends Object>, and reverse it in your method. In place.
+###Reverse a generic collection###
+Declare a method, expecting a Collection of generalized type <? extends Object>, and reverse it in your method. Return the same collection given, do not return a new collection!.
 
 The argument you accept in your method should be like `Collection<? extends Object> argument`. Ask me about the question mark when you get here if I forget to explain the difference with Collection<Object>.
 
