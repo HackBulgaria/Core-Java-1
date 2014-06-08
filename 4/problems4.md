@@ -12,10 +12,12 @@ TDD, of course.
 *Hint (and also spoiler)* 
 Is there a way you can use a *stack* in here?
  
-###Reverse a generic collection in-place###
-Declare a method, expecting a Collection of generalized type <? extends Object>, and reverse it in your method. In place.
-
-The argument you accept in your method should be like `Collection<? extends Object> argument`. Ask me about the question mark when you get here if I forget to explain the difference with Collection<Object>.
+###Reverse a generic collection###
+Declare a method, expecting a Collection and reverse it in your method. Return the same collection given, do not return a new collection!.
+Either use:
+`static <T> void  reverse (Collection<T> collection)`  
+or make it a concrete type:  
+`static void reverse(Collection<Integer> collection)`  
 
 *Do not try to use* Collections.reverse. It works only for a List, and not for collections : )
 
@@ -43,12 +45,12 @@ System.out.println(boundedQueue.toString()); //3,4,5
 ```
 
 ###Rotate the elements of a collection###
-Make a *utility* method that rotates the contents of a collection. Do it *in place*.
+Make a void *utility* method that rotates the contents of a collection. 
 ```
 You are given a collection containing [one, two, three, four, five, six, seven]
 "Rotating" it once means the collection becoming [seven, one, two, three, four, five, six]
 
-void rotate(Collection<? extends Object> collection, int rotateStep )
+void rotate(Collection<Integer> collection, int rotateStep )
 rotateStep can be negative - meaning you are rotating to the left, and not to the right.
 ```
  
