@@ -149,11 +149,31 @@ http://javarevisited.blogspot.com/2011/06/comparator-and-comparable-in-java.html
 
 
 
-//for part 2
+
 ###Make a utility method that converts a hashMap into a very human-readable string###
-Make a *utility* method that takes a HashMap<
+Make a *utility* method that takes a HashMap<? extends Object, ? extends Object> 
+and *returns a String*, representing the HashMap.
 
-###Count occurences in an array###
-Make a generic *utility* method, that **accepts** a List<T extends Object> and returns a Map<T extends Object, Integer> that counts the occurences of Objects in the List.  
-Example usage of your method  
+I want you to make a utility method that does this, * do not* to override toString() in hashMap.
 
+Example:
+```
+String result = YourUtilsClass.yourFirstUtilMethod(map); 
+System.out.println(result) // { key1:value1, key2:value2, key3:value3 } 
+```
+}
+
+###Count occurences of words in text###
+Make a *utility* method that takes a `String text`  and returns a map, which on every word in `text` maps the number of times this word has been used.
+See Example:
+
+```
+Map<String, Integer> result = YourUtilsClass.yourSecondUtilMethod("Ninjas are all over the place! We are all going to die!");
+System.out.println(YourUtilsClass.yourFirstUtilMethod(result));
+
+// { Ninjas: 1, are: 2, all: 2, over: 1, the: 1, place:1, We:1, going:1, to:1, die!:1}
+```
+
+Retain the ordering of the elements! 
+
+###Cryptoanalysis fun###
