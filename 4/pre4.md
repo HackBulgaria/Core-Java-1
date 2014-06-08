@@ -21,6 +21,6 @@ http://www.tutorialspoint.com/java/java_hashmap_class.htm
 *HashMap vs Hashtable vs TreeMap in Java*  
 http://www.programcreek.com/2013/03/hashmap-vs-treemap-vs-hashtable-vs-linkedhashmap/
 
-*Equals and hashcode in java*
+*Equals and hashcode in java*  
 http://stackoverflow.com/questions/27581/overriding-equals-and-hashcode-in-java
 
