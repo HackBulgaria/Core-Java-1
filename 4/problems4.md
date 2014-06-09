@@ -177,3 +177,39 @@ System.out.println(YourUtilsClass.yourFirstUtilMethod(result));
 Retain the ordering of the elements! 
 
 ###Cryptoanalysis fun###
+There is an old technique for encrypting messages - shuffling the letters. For instance, if we take the string `Godzilla`, one crypted version of it 
+is `Mrezotti`.
+The cipher here is
+```
+G=m
+o=r
+d=e
+i=o
+l=t
+z=z
+```
+
+Your task here is to decrypth the following text:
+```
+Ajb vnf guj luqv akjvojufq  . Sk qkkj egvfs Rkhfwu Lumemu'q akhhfjvq kj vnf ohifjbojc essoxew kg Dofck Ckqve , nfsf'q Ffsjejbk Tkssfq vk qnkr vnf ohifvukuq zkujc dkz nkr ov'q bkjf    Iv'q vnf qehf fxfsz quhhfs . Nk-kjf neq fxfs coxfj hf ejzvnojc kj e iwevf . Tnfz hebf hf akhifvf gks hz iweaf vnf xfsz hkhfjv I ckv ojvk vnf gosqv vfeh; vnev'q rnev vnfz veucnv hf ejb ov'ww df vnev rez ujvow I wfexf . Tnf nocnfs puewovz iwezfsq vnev akhf - ejb Dofck Ckqve oq puewovz - vnf csfevfs vnf akhifvovokj roww df ejb vnf dfvvfs ov'ww df gks vnf vfeh .Ajb gfes jkv ( ks , ewvfsjevoxfwz , bkj'v cfv vkk ftaovfb)  , Tkssfq neq jk iwejq vk vuam veow ejb suj ejb wfexf noq iezanfamq dfnojb .    I bkj'v nexf ejz iwejq vk hkxf erez socnv jkr .    Ig rf woqvfjfb vk eww vnf suhkusq rf'b nexf 50 iwezfsq . Nkr'q jkv vnf socnv vohf vk df vnojmojc edkuv Cnfwqfe . I'h qusf vnf awud oq rksmojc vk ohiskxf vnf vfeh , duv eww vnev hevvfsq socnv jkr oq vnf Wkswb Cui .Om , vnev dov edkuv vnf 50 iwezfsq hebf hf anuamwf .  Noaf kjf , Ffsjejbk .Nkr , oj ej obfew rkswb , rf rkuwb ifsneiq cfv vnfqf rksbq gskh Lumemu , rnkh rf'b womf vk dfakhf wfcfjbesz ev Cnfwqfe .  Buv rf bkj'v woxf oj ej obfew rkswb , ejb ojqvfeb rf cfv vnfqf rksbq gskh Tkssfq , rnkh rf'b womf vk dfakhf e wkjc-gksckvvfj hfhksz ev Cnfwqfe .  Aweq .Tnev dfojc qeob , qojaf ov'q deqoaewwz ej ohikqqodwf vk veqm vk sob kusqfwxfq kg vnf £100h gwki , ev wfeqv nf'q ckv vnf socnv evvovubf .  Hussez?
+```
+
+Once more, your task is not to make a program that *deciphers every possible text on the planet*, you just have to decipher *this text*. And by decipher, I mean extract the meaning of it - let's not care about missed dots, commas, word casing and such stuff.
+
+####Instructions and hints####
+
+A usually good counter-attacking technique is to simply make a histogram of the usage of letters in the *given* text and comapre it to the histogram of letters *in the language*. 
+For example, in the english language, the letter 'e' is the most frequently used, in a total of 13% of all letters. So there is a good chance the most commonly used letter in the given text  is 'e'.  
+
+You can see some frequencies and letter distribution facts here:  
+http://en.wikipedia.org/wiki/Letter_frequency  
+http://www.cryptograms.org/letter-frequencies.php  
+
+
+Some hints:
+- Ignore one-letter words. They are likely dots or hyphens or commas, you will add them later.
+- Trim spaces on words after you parse them. Make sure you are not analysing empty spaces.
+- Watch out for letter casing! Make sure you analyze uppercase 'T' the same as downcase 't'.
+- As this problem requires some visual examination, do *not try* to solve in TDD at first. In fact, in general, apply *TDD* only when you have something to test for.
+- If frequency attack turns out to be not good enough, check [the list of 5000 most used words in English](https://docs.google.com/spreadsheets/d/1LuHWIlshSqwfr3AKwvqIoXAGZrNmsPUopwfhc3DhtS4/edit#gid=0). There is a good chance some of those will be from the first words you unveil! 
+
