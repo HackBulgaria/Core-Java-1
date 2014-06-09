@@ -154,7 +154,7 @@ http://javarevisited.blogspot.com/2011/06/comparator-and-comparable-in-java.html
 Make a *utility* method that takes a `HashMap<? extends Object, ? extends Object>`
 and *returns a String*, representing the HashMap.
 
-I want you to make a utility method that does this, *do not* to override `toString()` in hashMap.
+I want you to make a utility method that does this, *do not* override `toString()` in hashMap.
 
 Example:
 
