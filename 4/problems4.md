@@ -215,6 +215,8 @@ Some hints:
 - Ignore one-letter words. They are likely dots or hyphens or commas, you will add them later.
 - Trim spaces on words after you parse them. Make sure you are not analysing empty spaces.
 - Watch out for letter casing! Make sure you analyze uppercase 'T' the same as downcase 't'.
+- Make a method `String applyCipher(Map<Character, Character> cipher)`. You will likely find a good use for it. Of course, it is not mandatory.
 - As this problem requires some visual examination, do *not try* to solve in TDD at first. In fact, in general, apply *TDD* only when you have something to test for.
 - If frequency attack turns out to be not good enough, check [the list of 5000 most used words in English](https://docs.google.com/spreadsheets/d/1LuHWIlshSqwfr3AKwvqIoXAGZrNmsPUopwfhc3DhtS4/edit#gid=0). There is a good chance some of those will be from the first words you unveil! 
+
 
