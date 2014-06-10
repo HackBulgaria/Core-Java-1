@@ -176,7 +176,7 @@ System.out.println(YourUtilsClass.yourFirstUtilMethod(result));
 Outputs:
 
 ```
-// { Ninjas: 1, are: 2, all: 2, over: 1, the: 1, place:1, We:1, going:1, to:1, die!:1}
+// { Ninjas: 1, are: 2, all: 2, over: 1, the: 1, place!:1, We:1, going:1, to:1, die!:1}
 ```
 
 Retain the ordering of the elements!
