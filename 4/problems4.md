@@ -1,5 +1,5 @@
 All of these should go in a project named 'Collections1'
-###Check if an expression of brackets is correct###
+###0.Check if an expression of brackets is correct###
 Such expression is a string like `"()()())))((())("` - it has multiple brackets, your job is to check whether the expression is correct.
 Such expression is correct if:
 - it starts with a `'('`
@@ -12,7 +12,7 @@ TDD, of course.
 *Hint (and also spoiler)*
 Is there a way you can use a *stack* in here?
 
-###Reverse a generic collection###
+###1.Reverse a generic collection###
 Declare a method, expecting a Collection and reverse it in your method. Return the same collection given, do not return a new collection!.
 Either use:
 `static <T> void  reverse (Collection<T> collection)`
@@ -22,7 +22,7 @@ or make it a concrete type:
 *Do not try to use* Collections.reverse. It works only for a List, and not for collections : )
 
 
-###Implement an on/off collection###
+###2.Implement an on/off collection###
 Implement a Collection, in which, if you add an element twice, the element gets removed from your collection.
 
 *Hint and edge case spoiler:* How would you handle null objects? :)
@@ -30,7 +30,7 @@ Implement a Collection, in which, if you add an element twice, the element gets 
 Note that the java implementations are broken on several places, allowing nulls to creep into the collections, making all kinds of havoc later on. Don't blindly follow the java implementations, do better.
 
 
-###Make a bounded queue###
+###3.Make a bounded queue###
 A bounded queue is queue with a 'limit' of maximum elements.
 Your `BoundedQueue` class of course should implement the `Queue` interface.
 Example usage of your `BoundedQueue` class:
@@ -44,7 +44,7 @@ boundedQueue.offer(5);
 System.out.println(boundedQueue.toString()); //3,4,5
 ```
 
-###Rotate the elements of a collection###
+###4.Rotate the elements of a collection###
 Make a void *utility* method that rotates the contents of a collection.
 
 You are given a collection containing `[one, two, three, four, five, six, seven]`
@@ -57,7 +57,7 @@ void rotate(Collection<Integer> collection, int rotateStep )
 `rotateStep` can be negative - meaning you are rotating to the left, and not to the right.
 
 
-###Given a list contaning some duplicate values, find the first unique element###
+###5.Given a list contaning some duplicate values, find the first unique element###
 Make a *utility* method, which returns the first unique element in a given argument of type `Collection<Integer>`.
 Example:
 
@@ -67,7 +67,7 @@ System.out.println(yourMethod(ints)) //2;
 ```
 
 
-###Given several sets, find the duplicating elements###
+###6.Given several sets, find the duplicating elements###
 Write a *utility* method, that takes several sets, and returns a set that contains the duplicating elements of all the other sets.
 
 ```
@@ -78,12 +78,12 @@ C = {5,6,7,8}
 
 `yourMethd(A,B,C) => D{5}`
 
-###Given a list of Students, sort them by grade###
+###7.Given a list of Students, sort them by grade###
 Lets say you have a `List<Student>`, where a Student is a class, containing two fields: `name` and `grade`.
 
 Sort them by their grades first. Their grades actually are integers => 2,3,4,5,6. If two students happen to have the same grades, sort those two by their names.
 
-###Give me the median, quick!###
+###8.Give me the median, quick!###
 Make an interface `Statistics`, which has these operations:
 
 ```
@@ -110,7 +110,7 @@ Come back to this when you are done with all the tasks.
 Solve this one *iteratively* with TDD.
 
 
-###Implement a class ToDoList###
+###9.Implement a class ToDoList###
 Imagine you have a world of stuff to do.
 Homeworks, courseworks, exams, even preparing for HackBulgaria!
 Unfortunately you do not have much time - you need to eat, you need to sleep, you need to have a good time.
@@ -150,7 +150,7 @@ System.out.println(todo.getTimeNeeded()) //sum of the time needed for every task
 See Comparable and Comparator classes in Java. Check out the PriorityQueue class.
 http://javarevisited.blogspot.com/2011/06/comparator-and-comparable-in-java.html
 
-###Make a utility method that converts a hashMap into a very human-readable string###
+###10.Make a utility method that converts a hashMap into a very human-readable string###
 Make a *utility* method that takes a `HashMap<? extends Object, ? extends Object>`
 and *returns a String*, representing the HashMap.
 
@@ -163,7 +163,7 @@ String result = YourUtilsClass.yourFirstUtilMethod(map);
 System.out.println(result) // { key1:value1, key2:value2, key3:value3 }
 ```
 
-###Count occurences of words in text###
+###11.Count occurences of words in text###
 Make a *utility* method that takes a `String text`  and returns a map, which on every word in `text` maps the number of times this word has been used.
 
 See Example:
@@ -176,12 +176,12 @@ System.out.println(YourUtilsClass.yourFirstUtilMethod(result));
 Outputs:
 
 ```
-// { Ninjas: 1, are: 2, all: 2, over: 1, the: 1, place:1, We:1, going:1, to:1, die!:1}
+// { Ninjas:1, are:2, all:2, over:1, the:1, place!:1, We:1, going:1, to:1, die!:1 }
 ```
 
 Retain the ordering of the elements!
 
-###Cryptoanalysis fun###
+###12.Cryptoanalysis fun###
 There is an old technique for encrypting messages - shuffling the letters. For instance, if we take the string `Godzilla`, one crypted version of it 
 is `Mrezotti`.
 The cipher here is
