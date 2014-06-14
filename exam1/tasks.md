@@ -24,7 +24,7 @@ Disclaimer: To **log** somethings means simply to write it to the console.
 A *logger* class is a class that people use when they want something written on the console. Of course, one can always use `System.out.println()`, but it is a churn, and logger classes tend to offer good methods for writing a little more complicated stuff to the console (see examples below). 
 
 A logger class also has something called `LEVEL`, which is usually an integer. 
-`LEVEL` represents the **importance** of the message logged. For istannce, `logger.log(3, "something)` means that the priority for message **"something"** is **3**.
+`LEVEL` represents the **importance** of the message logged. For instance, `logger.log(3, "something)` means that the priority for message **"something"** is **3**.
 
 When a `LEVEL` is set to the logger, the logger **ignores logging calls for higher leveles**.
 For instance:
