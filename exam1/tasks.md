@@ -26,7 +26,7 @@ A *logger* class is a class that people use when they want something written on 
 A logger class also has something called `LEVEL`, which is usually an integer. 
 `LEVEL` represents the **importance** of the message logged. For instance, `logger.log(3, "something)` means that the priority for message **"something"** is **3**.
 
-When a `LEVEL` is set to the logger, the logger **ignores logging calls for higher leveles**.
+And when a `LEVEL` is **set to the logger**, the logger **ignores logging calls for higher levels**.
 For instance:
 ```java
 Logger logger = new Logger(3); //set LEVEL to 3
