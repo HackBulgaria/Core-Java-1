@@ -65,33 +65,29 @@ Have you ever wanted to watch a movie, and all the cyrillic characters be like ï
 
 Have you received an emails like "Greetings, dear ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"?
 
-These things happen because of difference in the encoding and decoding schemes. 
-As we all know, even text files and strings are retained as binary in memory. 
+These things happen because of different encoding and decoding schemes used.   
 
+As we all know, even text files and strings are retained as binary in memory. 
 So if we have the string 'Dumbledore', we need to store an array of bytes to represent it. 
 
-The way we choose what bytes represent 'Dumbledore' in memory is called an  **encoding**.
+The way we choose what bytes represent 'Dumbledore' in memory is called an **encoding scheme**. (a.k.a. encoding)
+"windows-1251" is a type of encoding scheme.
+"ISO-8859-1" is another type of encoding scheme.
 
-"windows-1251" is a type of encoding.
-"ISO-8859-1" is another type of encoding.
+The way we choose to convert it from a byte array to a char array is called a **decoding scheme**.
 
 **Unicode** is an industry standard of encodings. There is no good reason against an Unicode encoding scheme.
 UTF-8 is a good encoding scheme from the Unicode standard. (There are others, which differ slightly.)
 
-Here you are given a file with subtitles, encoded in "windows-1251". 
-http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#readFileToString(java.io.File,%20java.nio.charset.Charset)
-
-http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#write%28java.io.File,%20java.lang.CharSequence,%20java.nio.charset.Charset%29
-
+So, here you are given a text file with a Windows-1251 encoding. Your task is to convert it to UTF-8. You can test this in your browser, just open the text file and choose to view it with UTF-8 encoding. (You might have to rename it to .html though)
 
 The subtitle you need to fix are here: http://subsunacs.net/get.php?id=41854
-
 It is okay not to use TDD for this one. 
 
 In summary:
 - Create a utility method `fixEncoding(Path path)`
 - Backup the subtitles file so you don't have to download it again if you fail to write it.
-- The subtitles in the file are of **windows-1251** encoding 
-- Conver them to UTF-8.
+- The text in the file given is encoded using a **windows-1251** scheme. 
+- Conver it to UTF-8.
 
 
