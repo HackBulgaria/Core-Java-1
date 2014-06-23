@@ -16,12 +16,12 @@ Make sure you have utility methods that read from and write to files, and people
 
 ### Implement a 'Properties' file parser.
 
-[.properties files](http://en.wikipedia.org/wiki/.properties) are commonly used in java as a resources and configuration.
+[.properties files](http://en.wikipedia.org/wiki/.properties) are commonly used in java as a resources and configuration. They just represent a key=value pairs, where each pair is a new line. The `#` sign denotes a comment.
 
 Make a **utility** method `Map<String, String> parseProperties` that reads a .properties file and returns its content as a Map<String,String>.
 
 The `#`-sign, when seen as a **first character in a line**,  denotes that **the line is a comment and should not be parsed**. 
-Be careful when parsing lines. 
+
 ```
 # this=comment
 a1=b1 
@@ -32,7 +32,7 @@ a5=b6=b7=b8
 a6=b9 #comment 
 a7==b10
 ```
-All of the above entries are all valid. 
+All of the above entries are all valid key-value pairs. 
 The value for `a5` is `b6=b7=b8`
 The value for `a6` is `b9 #comment`
 The value for `a7` is `=b10`
