@@ -20,10 +20,10 @@ Make sure you have utility methods that read from and write to files, and people
 
 Make a **utility** method `Map<String, String> parseProperties` that reads a .properties file and returns its content as a Map<String,String>.
 
-The `#`-sign as a first character in a line denotes that **this line is a comment**. You should ignore such lines. 
+The `#`-sign, when seen as a **first character in a line**,  denotes that **the line is a comment and should not be parsed**. 
 Be careful when parsing lines. 
 ```
-\#this=comment
+# this=comment
 a1=b1 
 a2 =b2
 a3    =    b3
