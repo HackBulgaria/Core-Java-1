@@ -58,3 +58,40 @@ int getCharacterCount(); //returns number of characters in the file.
 
 Follow the testing approach described in the previous task.
 
+
+
+### Fix these subtitles
+Have you ever wanted to watch a movie, and all the cyrillic characters be like ������? 
+
+Have you received an emails like "Greetings, dear �������"?
+
+These things happen because of difference in the encoding and decoding schemes. 
+As we all know, even text files and strings are retained as binary in memory. 
+
+So if we have the string 'Dumbledore', we need to store an array of bytes to represent it. 
+
+The way we choose what bytes represent 'Dumbledore' in memory is called an  **encoding**.
+
+"windows-1251" is a type of encoding.
+"ISO-8859-1" is another type of encoding.
+
+**Unicode** is an industry standard of encodings. There is no good reason against an Unicode encoding scheme.
+UTF-8 is a good encoding scheme from the Unicode standard. (There are others, which differ slightly.)
+
+Here you are given a file with subtitles, encoded in "windows-1251". 
+http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#readFileToString(java.io.File,%20java.nio.charset.Charset)
+
+http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#write%28java.io.File,%20java.lang.CharSequence,%20java.nio.charset.Charset%29
+
+
+The subtitle you need to fix are here: http://subsunacs.net/get.php?id=41854
+
+It is okay not to use TDD for this one. 
+
+In summary:
+- Create a utility method `fixEncoding(Path path)`
+- Backup the subtitles file so you don't have to download it again if you fail to write it.
+- The subtitles in the file are of **windows-1251** encoding 
+- Conver them to UTF-8.
+
+
