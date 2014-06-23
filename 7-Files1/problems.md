@@ -32,7 +32,7 @@ a5=b6=b7=b8
 a6=b9 #comment 
 a7==b10
 ```
-All of the above entries are all valid key-value pairs. 
+All of the above entries (`a1` to `a7`) are valid key-value pairs. 
 The value for `a5` is `b6=b7=b8`
 The value for `a6` is `b9 #comment`
 The value for `a7` is `=b10`
