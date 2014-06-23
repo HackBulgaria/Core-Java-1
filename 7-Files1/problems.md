@@ -63,7 +63,7 @@ Follow the testing approach described in the previous task.
 ### Fix these subtitles
 Have you ever wanted to watch a movie, and all the cyrillic characters be like ������? 
 
-Have you received an emails like "Greetings, dear �������"?
+Have you ever received emails like "Greetings, dear �������"?
 
 These things happen because of different encoding and decoding schemes used.   
 
