@@ -91,3 +91,66 @@ In summary:
 - Conver it to UTF-8.
 
 
+### Reduce-file-path in 1 line
+*This is a really quick one.*
+Solve the [reduce-file-path problem (number 27)] (https://github.com/HackBulgaria/Programming101/blob/master/week0/simple_problems2.md) with no more than 1 line of Java code.
+Check out [the normalize method] (http://docs.oracle.com/javase/7/docs/api/java/nio/file/Path.html#normalize%28%29)
+
+
+### Find all broken links in a given folder
+A broken link is a link that points to something that is simply not there.   
+Make a **utility** method that is given a foler (as a Path),  and searches recursively for bad links.  
+If it finds a bad link, it should simply print it out.  
+
+How to detect a bad link? Use `Files.isSymbolicLink(path)` in order to check if a file is a link, and `Files.readSymbolicLink(path)` in order to follow it and receive its target's path.
+
+
+### Find all duplicated files!
+
+##### Summary:
+Two files are **duplicates** if all the **bytes** from file1 are the same as the **bytes** from file2.
+Find and print out all touples of duplicate files.
+
+##### Detailed
+
+We are going to make a command line java tool, that receives a folder location and finds and prints outs all groups of duplicating files, ancestors of the given folder.
+It is called like this:
+```java
+java -jar duplicates-finder.jar /home/georgi/Dev 
+
+//Ouput below:
+//Group A
+/home/georgi/Dev/eclipse/settings.xml
+/home/georgi/Dev/ADT/settings.xml //duplicate
+/home/georgi/Dev/eclipse/plugins/default/settings.xml //duplicate
+
+//Group B
+/home/georgi/Dev/eclipse/update-site.xml
+/home/georgi/Dev/ADT/update-site.xml //duplicate
+/home/georgi/Dev/tmp/copies/site_backup.xml //duplicate
+
+//Group C
+/home/georgi/Dev/eclipse/readme.txt 
+/home/georgi/Dev/workspace/Project1/data/readme.txt //duplicate
+
+3 groups of duplications found.
+A total of 5 duplicate files can be deleted, freeing up /*the sum of the lengths of those 5 files*/ disk space
+...
+```
+
+All the files from Group A are equivalent (every file from Group A has the same contents).   
+Same for group B and group C. As you can see, the **name** of the file does not matter.   
+File A can be a duplicate of file B regardless of them having different names.
+
+
+Hints:
+- When visiting files, be careful with links. You should check if the file currently being visited is a link by using `Files.isSymbolicLink(Path)`. If the file happens to be a symbolic link, find and use **it's target**, by using `Files.readSymbolicLink(pathOfSymbolicLink);`.
+- When following symbolic links in the way described above, be careful, because symbolic links may lead to files that **do not exist** (broken links). Your program should not stop working merely because it saw a broken link!
+- Ignore files with size over 512KB. If we want our tool to work for large files, the task get's a little bit more interesting and non-trivial :)
+- Be very careful when dealing with **OS-Special files (devices files)**. You should ignore them, as the OS call might block/hang when you try to read or write into of them. Use `Files.isRegular(path)` to check whether a file is a normal file, or it's a special file and we should probably not play with it.
+- Create a folder `testData` in your project. Add  
+[More spoilers and possible approaches] (https://gist.github.com/GeorgiPachov/039d2c339358dbfcc650)
+
+
+
+
