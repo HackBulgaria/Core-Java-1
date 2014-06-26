@@ -91,6 +91,15 @@ In summary:
 - Conver it to UTF-8.
 
 
+### Enums quick write-up
+Design an Enum name 'Day', containing the days => MONDAY, TUESDAY... SUNDAY
+
+Design a method greetMe(Day day), which returns a (String) different greeting per day.
+
+Example
+greetMe(Day.Monday) => "Holla!";
+greetMe(Day.Tuesday) => "Aloha!";
+
 ### Reduce-file-path in 1 line
 *This is a really quick one.*
 Solve the [reduce-file-path problem (number 27)] (https://github.com/HackBulgaria/Programming101/blob/master/week0/simple_problems2.md) with no more than 1 line of Java code.
