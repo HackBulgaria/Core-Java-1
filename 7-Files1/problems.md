@@ -105,6 +105,27 @@ If it finds a bad link, it should simply print it out.
 How to detect a bad link? Use `Files.isSymbolicLink(path)` in order to check if a file is a link, and `Files.readSymbolicLink(path)` in order to follow it and receive its target's path.
 
 
+### Implement a simple text file compression
+
+
+Create a **utility** method `compress(Path filePath)`
+that reads the text from `filePath` and writes it back in a compressed way, adding the `.compr` extension (or one of your choosing).
+
+Let's have the file 
+`Buffalo buffalo buffalo rides a buffalo buffalo buffalo.`
+There are a lot of repeating words here (duuh).
+
+Parse all the words from a file, add them to an index, and assign them numbers.
+Replace all the words in the file with their respective indices, prepending them with '~' or another letter of your choosing.
+E.g. our sentence becomes
+
+~0 ~0 ~0 ~1 ~2 ~0 ~0 ~0.
+
+Implement a decompressing scheme (another **utility** method)
+
+Check out the file compression you've just made : )
+
+
 ### Find all duplicated files!
 
 ##### Summary:
