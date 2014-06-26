@@ -178,7 +178,7 @@ Hints:
 - When following symbolic links in the way described above, be careful, because symbolic links may lead to files that **do not exist** (broken links). Your program should not stop working merely because it saw a broken link!
 - Ignore files with size over 512KB. If we want our tool to work for large files, the task get's a little bit more interesting and non-trivial :)
 - Be very careful when dealing with **OS-Special files (devices files)**. You should ignore them, as the OS call might block/hang when you try to read or write into of them. Use `Files.isRegular(path)` to check whether a file is a normal file, or it's a special file and we should probably not play with it.
-- Create a folder `testData` in your project. Add  
+- Create a folder `testData` in your project. Create several folders and files with which you can test your problem. If you are too lazy for that, just download and unzip [this test data] (https://github.com/HackBulgaria/Core-Java-1/blob/master/7-Files1/testData.zip) in your project.
 [More spoilers and possible approaches] (https://gist.github.com/GeorgiPachov/039d2c339358dbfcc650)
 
 
