@@ -11,3 +11,4 @@ Use the methods `showToaster`, `setToasterWidth`, `setToasterHeight`, `setToaste
 ![This dog] (http://www.mnn.com/sites/default/files/editorial/Corgeek.jpg)
 
   
+Also, check out the `Thread.sleep` method.
