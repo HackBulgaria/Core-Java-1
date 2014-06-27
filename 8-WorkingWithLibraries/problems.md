@@ -1,3 +1,14 @@
+### Send an email about the 'Suarez' accident
+
+Have you seen the Suarez-Chiellini biting accident from the World Cup in Brazil? It was both hilarious and weird-ish at the same time.   
+In the dawn of the internet, when skype, snapchat and stuff like that did not exist, people were sending a lot of emails to each other with funny stuff.   
+
+Send an email to someone about the suarez biting accident. Attach a gif of the biting accident, available [here](http://d3dsacqprgcsqh.cloudfront.net/photo/azbW3zq_460sa_v1.gif)
+
+Integrate and use the apache commons-email library from http://commons.apache.org/proper/commons-email/userguide.html
+
+Note: The commons-email library depends on the javax.mail library, which you should download from somewhere.
+
 ### JToaster
 
 Ivan stays a lot on his computer. His mother is afraid he will spoils his vision.
@@ -12,3 +23,5 @@ Use the methods `showToaster`, `setToasterWidth`, `setToasterHeight`, `setToaste
 
   
 Also, check out the `Thread.sleep` method.
+
+
