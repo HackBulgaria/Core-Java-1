@@ -25,3 +25,23 @@ Use the methods `showToaster`, `setToasterWidth`, `setToasterHeight`, `setToaste
 Also, check out the `Thread.sleep` method.
 
 
+### Make a QuickCodeInspector desktop application
+
+Ever needed to really, really quickly inpsect some code?
+Here is a one cool syntax highlighter for java https://code.google.com/p/java-syntax-highlighter/
+
+1) Create a program, that receives a file path as a command-line argument (args[0] in `main(String[] args)`)
+2) For the File given, launch a syntax highlighter windows as the example in the link above.
+
+Come back when you are done with 1) and 2). 
+
+Does it work so far? Marvelous. 
+3) *Not mandatory*. Now, for the fun, export your program as jar. (See Eclipse->Export). Register your program as one that can handle .java files in your OS (the way to do this will vary among OS and distributions)  
+For ubuntu see http://askubuntu.com/questions/289337/how-can-i-change-file-association-globally  
+Go and check your cool java program that opens .java files for you. (Remove the entry if you want to).
+
+4) Set a title on the window that matches the name of the file being viewed!  
+5) How cool would it be if we could navigate through all the files of the current directory with the arrows of the keyboard?  
+In order to do that, make the jframe **focusable**, add a **KeyEventListener**, and when the user presses the arrow-next on the keyboard (see [key-code table] (http://www.foreui.com/articles/Key_Code_Table.htm)), `dispose()` the frame and create a new one with a syntax highlighter configured for the next file.   
+6) Make this work recursively for all the files in the folder.  
+
