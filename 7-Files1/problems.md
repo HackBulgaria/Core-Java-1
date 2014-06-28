@@ -108,14 +108,14 @@ Check out [the normalize method] (http://docs.oracle.com/javase/7/docs/api/java/
 
 ### Find all broken links in a given folder
 A broken link is a link that points to something that is simply not there.   
-Make a **utility** method that is given a foler (as a Path),  and searches recursively for bad links.  
+Make a **utility** method that is given a folder (as a Path),  and searches recursively for bad links.  
 If it finds a bad link, it should simply print it out.  
 
 How to detect a bad link? Use `Files.isSymbolicLink(path)` in order to check if a file is a link, and `Files.readSymbolicLink(path)` in order to follow it and receive its target's path.
 
 
 ### Implement a simple text file compression
-
+(*Optional*)
 
 Create a **utility** method `compress(Path filePath)`
 that reads the text from `filePath` and writes it back in a compressed way, adding the `.compr` extension (or one of your choosing).
