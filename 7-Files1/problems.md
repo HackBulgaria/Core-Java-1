@@ -115,7 +115,7 @@ How to detect a bad link? Use `Files.isSymbolicLink(path)` in order to check if 
 
 
 ### Implement a simple text file compression
-
+(*Optional*)
 
 Create a **utility** method `compress(Path filePath)`
 that reads the text from `filePath` and writes it back in a compressed way, adding the `.compr` extension (or one of your choosing).
