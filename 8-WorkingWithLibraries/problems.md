@@ -39,6 +39,15 @@ Does it work so far? Marvelous.
 3) *Not mandatory*. Now, for the fun, export your program as a *runnable* jar. (See Eclipse->Export). Register your program as one that can handle .java files in your OS (the way to do this will vary among OS and distributions)  
 For ubuntu see http://askubuntu.com/questions/289337/how-can-i-change-file-association-globally.  
 
+For windows, create a **.bat** file, containing somthing like:
+```
+"C:\Program Files\Java\jre7\bin\javaw.exe" -jar "C:\Users\Adriana\Desktop\QuickCodeInspector.jar" %1 %
+```
+1) C:\Program Files... -> Is the path to your javaw.exe location  
+2)-jar C:\Users.....  -> is the path to your QuickCodeInspector.jar  
+3) Just append %1 % at the end of the .bat script.
+After that, try opening .java files with your application, by using **open with** and pointing to your .bat file. 
+
 Go and check your cool java program that opens .java files for you. (Remove the entry later!).  
 
 4) Set a title on the window that matches the name of the file being viewed!  
