@@ -1,5 +1,7 @@
 ### Make an ASCII ART image viewer
 
+![example](http://i.imgur.com/ko5kj6vl.jpg)
+
 You are on the console. Again. You've reinstalled your linux `n` times, but your video driveres can't seem to work properly.   
 You've installed the proprietary ones, but then gnome 3 does not seem to like them and crashes with SEGFAULT... somewhere, because of reasons.
 
