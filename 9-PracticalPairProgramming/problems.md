@@ -65,7 +65,7 @@ The first team that implements the additional scaling part gets a free beer for 
 
 ### Implement MS paint in java
 Create an MS-Paint fullscreen equivallent in java. Implementing only a small subset of the features, of course.
-
+![example](http://i.imgur.com/OrQkzffl.jpg)
 ##### Project setup
 - Create a new java project named 'Paint'
 - Create 5 packages:
