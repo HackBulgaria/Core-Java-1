@@ -179,3 +179,6 @@ Extend the Sprite class:
 ###### Change active tools on a mousewheel
 Add a `MouseWheelListener` to the window, so when a mouse wheel event occurs, the `currentTool` gets changed. Implement mouse-wheel switch between drawing a dot and drawing with the spray tool. 
 
+###### Implement a 'undo' functionality on right mouse click.
+When I click accidentally the right mouse button, baaam, my drawing is gone.
+This sucks. Make it to just undo the last modification.
