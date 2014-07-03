@@ -105,6 +105,34 @@ Use and support **.mp4** for videos - we'd like to avoid any decoding issues.
 Do this until you are out of frames to draw.
 Make an ASCII representation of every video frame.
 
+```
+BufferedImage frame = null;
+while ((image = frameGrab.getFrame())!=null){
+    ...
+}
+```
+
+You can get an instance of `FrameGrab` using the below sinppet:
+```
+FileInputStream fileInputStream = new FileInputStream(file);
+FileChannelWrapper wrapper = new FileChannelWrapper(fileInputStream.getChannel());
+FrameGrab frameGrab = new FrameGrab(wrapper);
+```
+
+### Details, hints
+For both gif and video, you will need to clear the console. Use the `JLine` library - http://jline.sourceforge.net/, and `ConsoleReader#clearScreen` method.
+
+You have to clear the screen before drawing the next frame. 
+Your video/gif player should do something like the following
+```
+while hasFramesToPlay
+    String asciiArt = getAsciiRepresentation(frame);
+    print(asciiArt);
+    Thread.sleep(50); //sleep a little bit
+    clearConsole();
+```
+>>>>>>> 0c7676878dca720a7065eed41348a6db16c8e0a1
+
 ### Implement MS paint in java
 Create an MS-Paint fullscreen equivallent in java. Implementing only a small subset of the features, of course.
 ![example](http://i.imgur.com/OrQkzff.png)
