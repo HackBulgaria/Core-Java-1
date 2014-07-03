@@ -62,6 +62,34 @@ P.S.2 Do **not** upscale. Only downscale, if necessary.
 
 The first team that implements the additional scaling part gets a free beer for every member. 
 
+###### Gif support
+Use the `GifDecoder` class - http://www.java2s.com/Code/Java/2D-Graphics-GUI/GiffileEncoder.htm.
+Use the `read`, `getFrame` and `getFramesCount` methods in order to achieve your functionality.
+
+###### Video support
+
+Use the `jcodec` library. See sample code in https://github.com/jcodec/jcodec.
+Use the `FrameGrab` class to grab frame after frame.
+
+```
+BufferedImage frame = null;
+while ((image = frameGrab.getFrame())!=null){
+    ...
+}
+```
+
+### Details, hints
+For both gif and video, you will need to clear the console. Use the `JLine` library - http://jline.sourceforge.net/, and `ConsoleReader#clearScreen` method.
+
+You have to clear the screen before drawing the next frame. 
+Your video/gif player should do something like the following
+```
+while hasFramesToPlay
+    String asciiArt = getAsciiRepresentation(frame);
+    print(asciiArt);
+    Thread.sleep(50); //sleep a little bit
+    clearConsole();
+```
 
 ### Implement MS paint in java
 Create an MS-Paint fullscreen equivallent in java. Implementing only a small subset of the features, of course.
