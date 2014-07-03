@@ -62,10 +62,53 @@ P.S.2 Do **not** upscale. Only downscale, if necessary.
 
 The first team that implements the additional scaling part gets a free beer for every member. 
 
+##### GIF Support
+
+Now imagine that you are on the console and you'd like to check the hilarrious gif about Luiz Suarez your mate just send you. Not having a graphical environment should not be a stopper!
+
+How do we play gifs in the console? Simple. We **draw a frame**, we **wait a little bit**, then we **clear** the console and **draw the next frame**.
+
+Use the [JLine library](http://stackoverflow.com/questions/2979383/java-clear-the-console) to clear the console. See `ConsoleReader#clearScreen()`
+
+Use [Kevin Weiner's Gif Decoder class](http://www.java2s.com/Code/Java/2D-Graphics-GUI/DecodesaGIFfileintooneormoreframes.htm) to help you decode the gif frames. Make sure you **leave the copyright/author information intact when using the class!**
+
+Use the `GifDecoder` 's `read`, `getFrameCount` `getFrame(int)` methods in order to play the gif.
+
+In summary:
+Modify your application, so that if the **file given in args[0] is a gif file**:
+- args[1] will be the gif playing speed (delay between frames drawing). Assume 50 milliseconds if not given.   
+- read all the frames from the gif.  
+- Show the ascii art for the first frame (print it in the console)  
+- Wait a little bit (50 milliseconds **if not given from args[1]** - utilise the `Thread.sleep()` method)
+- Clear the console using Jline's `ConsoleReader#clearScreen`.
+- Draw the ascii art for the next frame (in the console)
+
+Do this until you are out of frames to draw.
+Make an ASCII representation of every frame.
+
+
+##### Video Support
+
+Come on, let's support video, shall we?
+
+Use the `jcodec` java library for video frame fetching. Focus on the class `FrameGrab` and look around its methods to see how you can use it to gain a frame from a video.
+Use and support **.mp4** for videos - we'd like to avoid any decoding issues.
+
+1 video plays (averagely) around 25 frames per second. Once more, implement the following flow:
+- args[1] will be the speed (delay between frames) given. Experiment and set a nice default value if the user does not provide a args[1]. It will be different for every laptop, as it is based on decoding speed.
+- read the next frame using `FrameGrab`
+- print the ascii ART on the console.
+- Wait a little bit using `Thread.sleep()`
+- Clear the console using Jline's `ConsoleReader#clearScreen`.
+- Draw the ascii art for the next frame.
+ 
+Do this until you are out of frames to draw.
+Make an ASCII representation of every video frame.
 
 ### Implement MS paint in java
 Create an MS-Paint fullscreen equivallent in java. Implementing only a small subset of the features, of course.
 ![example](http://i.imgur.com/OrQkzff.png)
+
 ##### Project setup
 - Create a new java project named 'Paint'
 - Create 5 packages:
