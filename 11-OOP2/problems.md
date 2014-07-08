@@ -63,7 +63,7 @@ timeTracker.start("fileCopyOperation");
 FileUtils.copy(path1, path2);
 timeTracker.finish("fileCopyOperation");
 
-System.out.println(timeTracker.getReport());
+System.out.println(timeTracker.getReport("fileCopyOperation"));
 // => "Operation fileCopyOperation took 314 ms. 
 //    "11:05 08-07-2014 started" 
 //    "11:06 08-07-2014 finished"
@@ -84,10 +84,18 @@ FileUtils.copyAsync(directory1, directory2, new CopyCallback(){ //copying ALL th
 
   public void onAllFilesCopied(){
     timeTracker.finish("asyncFileCopy"); 
-    System.out.println(timeTracker.getReport());
+    System.out.println(timeTracker.getReport("asyncFileCopy"));
   }
 }
 ); //copying multiple files here!
+
+timeTracker.start("moveOpearion");
+FileUitls.mv(path1,path2);
+timeTracker.finish("moveOperation");
+System.out.println(timeTracker.getReport("moveOperation"));
+// "Operation moveOperation took 112 ms"
+   "11:07 08-07-2014" - started
+   "11:07 08-07-2014" - finished
 ```
 
 **Note: calling getReport() if operation has not finished is a VALID operation**
