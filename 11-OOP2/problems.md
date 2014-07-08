@@ -98,7 +98,7 @@ System.out.println(timeTracker.getReport("moveOperation"));
    "11:07 08-07-2014" - finished
 ```
 
-**Note: calling getReport() if operation has not finished is a VALID operation**
+**Note: calling getReport(String) if operation has not finished is a VALID operation**
 
 
 #### Design and implement a 'search' method, giving the user some settings (Pair Programming)
@@ -112,7 +112,7 @@ Here are some predefined prioritization criteria you will need to implement and 
 - If a line in `haystack` is an exact match with needle, this is the top result.
 - If a line in `haystack` **begins** with `needle`, it is a second-top match.
 - If a line in `haystack` **contains** a `needle` **as a word**, and not a word **infix**, it is a third-rated match.
-- - For example, if `haystack` = "Baba Pena mrazi Sergei Stanishev" && `needle` = "mrazi" => third-rated match.
+- - For example, if a line in `haystack` = "Baba Pena mrazi Sergei Stanishev" && `needle` = "mrazi" => third-rated match.
 - - if `needle` = "mraz" => not a third-rated match.
 - If a line in `haystyack` **contains** haystack, it is the last-based match.
 
