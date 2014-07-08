@@ -95,7 +95,10 @@ timeTracker.finish("moveOperation");
 System.out.println(timeTracker.getReport("moveOperation"));
 // "Operation moveOperation took 112 ms"
    "11:07 08-07-2014" - started
-   "11:07 08-07-2014" - finished
+   "11:07 08-07-2014" - updated
+   "11:08 08-07-2014" - updated
+   "11:08 08-07-2014" - updated
+   "11:09 08-07-2014" - finished
 ```
 
 **Note: calling getReport(String) if operation has not finished is a VALID operation**
