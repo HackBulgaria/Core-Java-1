@@ -114,7 +114,7 @@ Here are some predefined prioritization criteria you will need to implement and 
 - If a line in `haystack` **contains** a `needle` **as a word**, and not a word **infix**, it is a third-rated match.
 - - For example, if a line in `haystack` = "Baba Pena mrazi Sergei Stanishev" && `needle` = "mrazi" => third-rated match.
 - - if `needle` = "mraz" => not a third-rated match.
-- If a line in `haystyack` **contains** haystack, it is the last-based match.
+- If a line in `haystyack` **contains** needle, it is the last-based match.
 
 The **priorities** given above are just for the example. The user of your class should be able to use any your predefined criteria, as well as **his own criteria**, and **define the priorities himself**.
 
