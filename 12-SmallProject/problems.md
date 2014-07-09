@@ -55,7 +55,7 @@ Example:
 ```
 java -jar yourJar.jar //launches your game with you playing against the CPU.
 java -jar yourJar.jar multiplay //launches your game with 2 players
-
+```
 
 The 'AI' here is just as complex and smart as Brazil's gameplan against Germany.  
 ###### AI round one: Random moves
