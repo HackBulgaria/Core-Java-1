@@ -45,8 +45,8 @@ If a user presses **l**, his game gets loaded (see below). **Loading can be undo
 
 
 ###### Additional: Implement a simple save-load mechanism
-When the user decides he wants to quit, don't lose his game forever. Save it to a location with a format of your choosing. You can use binary format + [serialization](http://www.tutorialspoint.com/java/java_serialization.htm)   
-When launching the game, if the user has a save, restore it.  
+When the user decides he wants to quit, don't lose his game forever. Save it to a location with a format of your choosing. You can use binary format + [serialization](http://www.tutorialspoint.com/java/java_serialization.htm). It is up to you.   
+When launching the game, if **the user has a save, restore it**.  
 
 ###### Additional: The most simple AI in the world
 Now, it's all cool playing with two players. How about playing against the CPU?   
