@@ -30,8 +30,8 @@ input: 1 2 //row 1, col 2 => 6
 
 ###### Additional: Implement a simple undo-redo.
 Now imagine User1 has made a bad choice. He now wants to undo his choice and User2 is OK with that. 
-If a user enters "u", it means 'undo' - the game must revert its previous state - the board just as it was before player 1 has made his bad choice. 
-Also, it is also his turn again : )
+If a user enters **u**, it means **undo** - the game must revert its previous state - the board just as it was before player 1 has made his bad choice. 
+Also, it is his turn again : )
 If a user enters "r", it means 'redo' - the user now wants to undo his undo - resulting in a 'redo' operation.
 If a user makes an **undo operation**, and the writes does a new move, the **redo** operations become unavailable.
 Design an 'Undo-Redo' solution. You may or may not use the classical [Memento](http://en.wikipedia.org/wiki/Memento_pattern) solution to this problem.	
