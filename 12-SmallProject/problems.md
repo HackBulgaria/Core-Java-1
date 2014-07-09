@@ -31,35 +31,35 @@ input: 1 2 //row 1, col 2 => 6
 ###### Additional: Implement a simple undo-redo.
 Now imagine User1 has made a bad choice. He now wants to undo his choice and User2 is OK with that. 
 If a user enters **u**, it means **undo** - the game must revert its previous state - the board just as it was before player 1 has made his bad choice. 
-Also, it is his turn again : )
-If a user enters "r", it means 'redo' - the user now wants to undo his undo - resulting in a 'redo' operation.
-If a user makes an **undo operation**, and the writes does a new move, the **redo** operations become unavailable.
-Design an 'Undo-Redo' solution. You may or may not use the classical [Memento](http://en.wikipedia.org/wiki/Memento_pattern) solution to this problem.	
-If you are into it, you can use the [Command pattern](http://gamedevelopment.tutsplus.com/tutorials/let-your-players-undo-their-in-game-mistakes-with-the-command-pattern--gamedev-1391) for this undo redo, but I personally don't recommend that for this task.
+Also, it is his turn again : )  
+If a user enters "r", it means 'redo' - the user now wants to undo his undo - resulting in a 'redo' operation - again, change of turns is happening.  
+If a user makes an **undo operation**, and does a new move, the **redo** operations become unavailable.  
+Design an 'Undo-Redo' solution. You may or may not use the classical [Memento](http://en.wikipedia.org/wiki/Memento_pattern) solution to this problem.	  
+If you are into it, you can use the [Command pattern](http://gamedevelopment.tutsplus.com/tutorials/let-your-players-undo-their-in-game-mistakes-with-the-command-pattern--gamedev-1391) for this undo redo, but I personally don't recommend this approach for this task.
  
 
 ###### Additional: User inputs
-If a user presses **n**, the board is cleared and the game starts all over. **Starting a new game can be undone.**
-If a user presses **s**, his game gets saved (see below). 
-If a user presses **l**, his game gets loaded (see below). **Loading can be undone** 
+If a user presses **n**, the board is cleared and the game starts all over. **Starting a new game can be undone.**  
+If a user presses **s**, his game gets saved (see below).   
+If a user presses **l**, his game gets loaded (see below). **Loading can be undone**   
 
 
 ###### Additional: Implement a simple save-load mechanism
 When the user decides he wants to quit, don't lose his game forever. Save it to a location with a format of your choosing. You can use binary format + [serialization](http://www.tutorialspoint.com/java/java_serialization.htm)   
-When launching the game, if the user has a save, restore it.
+When launching the game, if the user has a save, restore it.  
 
 ###### Additional: The most simple AI in the world
-Now, it's all cool playing with two players. How about playing against the CPU? 
-Read a command-line argument `multiplay`. By default `multiplay` should be false.
-Example:
+Now, it's all cool playing with two players. How about playing against the CPU?   
+Read a command-line argument `multiplay`. By default `multiplay` should be false.  
+Example:  
 ```
 java -jar yourJar.jar //launches your game with you playing against the CPU.
 java -jar yourJar.jar multiplay //launches your game with 2 players
 
 
-The 'AI' here is just as complex and smart as Brazil's gameplan against Germany.
+The 'AI' here is just as complex and smart as Brazil's gameplan against Germany.  
 ###### AI round one: Random moves
-Make the stupidest AI on the planet earth. Force your bot to choose a random location. Be wary when choosing locations, you should only use free positions. 
+Make the stupidest AI on the planet earth. Force your bot to choose a random location. Be wary when choosing locations, you should only use free positions.   
 
 ###### AI round two: Random moves + finishing strategy.
-Your AI should check if there is a move that he can make that will make him an instant winner. If not, move at random.
+Your AI should check if there is a move that he can make that will make him an instant winner. If not, move at random.  
