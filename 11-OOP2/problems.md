@@ -122,20 +122,21 @@ Here are some predefined prioritization criteria you will need to implement and 
 The **priorities** given above are just for the example. The user of your class should be able to use any your predefined criteria, as well as **his own criteria**, and **define the priorities himself**.
 
 
-#### Design (edit: and implement!) a TicTacToe game (Pair Programming)
-First, design (classes and code-flow) for a TicTacToe game. Do not start implementing until you have a very clear picture. Read the requirements below: 
+#### Design and implement a TicTacToe game (Pair Programming)
+Design (classes and code-flow) for a TicTacToe game. Do not start implementing until you have a very clear picture.
+
+Read the requirements below: 
 
 - Game is played by two people - User1 and User2. They take turns - first enters user A, after that - user B.
-- Users input its move via console like this: "0 1" // first row, second column.
-- If a user enters wrong/invalid input, it is his turn again.
-- If a user enters "quit", the game should exit immediately.
+- Users input its move via console like this: "0 1" // first row, second column
+- If a user enters "q", the game should exit immediately.
+- We are very likely to add other features to the game, and more complex user input is likely to follow.
 Some hints and tips:  
 - Core game logic should **not** be in the **main** method!
-- Distinguish game/board **visualization** from Core Game Logic.
-- User input and error handling logic **must** be separated from Core Game logic.
-- Make sure the game supports **different visualizations**. Handling user input/input errors is coupled with visualization.
-- Implement the game only on the console. Use 'X' for player 1, and 'O' for player 2. (Or use swing, if you feel up to it). 
-- Design your game so that a Swing (window-based) visualization can be easily added later on **with as few in-class modifications as possible**
+- Distinguish game/board **visualization** from **game logic**.
+- User keyboard input and error handling logic **must** be separated from **game logic**. Design your game so that a Swing (window-based) visualization can be easily added later on **with as few in-class modifications as possible**
+- Design the game in order to support **different visualizations**. Imagine we would like to add a GUI visualization later. 
+- Implement the game only on the console. Use 'X' for player 1, and 'O' for player 2. (Or use swing for GUI, if you feel up to it). 
 - Use good naming conventions, make your code presentable.
 - Matrices are usually easier to visualize by both developer and users when using an y-first approach.
 ```
@@ -146,52 +147,22 @@ input: 1 2 //row 1, col 2 => 6
 ```
 
 
-###### Additional: Implement undo-redo.
-Now imagine User1 has made a bad choice. He now wants to undo his choice and User2 is OK with that.
-Design an 'Undo-Redo' solution. Think about how will 
-
-#### Design a 'CarRental' service
-Cars can be Audi, BMW, Opel, WolkSWAGen, etc. They can also be Sedans or SUVs. Sedan's have an optional 'sports package' **extra**, adding extra horse power. SUV's have an optional **extra** - 1 more passenger seat. 
-Every car has its own license plate, number of seats and horse power.  
-Every car can be queried for its brand, license plate, number of passenger seats, and horse power.  
-
-Pseudocode is OK.
-
-### Design an Ice Cream class ofr an IceCreamMachine
-Ice cream is a great thing. Everybody loves ice cream. Some people love it with sprinkles, other people with added cream, a third kind likes it with a topping, a fourth kind of people like it with a topping and some sprinkles... you see where this is going. (Don't make classes like `VanillaSprinklesChocolateToppingNoCreamIceCream`, please)
-An ice cream machine can add  some (or) all of the 4 kinds of extras on an Ice Cream.
-
-Let's say you have a class `IceCream`
-```java 
-public class IceCream{
-   public String toString() {
-     return "Plain old IceCream";
-   }
-}
-```
-
-```java
- IceCream iceCream = IceCreamMachine.newRandomFlavouredIceCreme(); //just for the test!
- System.out.println(iceCream.toString());
- //Cherry Ice cream with added sprinkles with added vanilla topping with added sour cream
-
-```
-
-IceCream flavours, kinds of toppings, and extras as a whole are expected to grow in numbers. How can you make your IceCream class handle additional extras and still implement `toString()` correctly?
-
-
-#### Design an abstract and flexible search  (OK for github workflow)
-Remember the searching thing? You want to search for a needle in a haystack. Needle will be a `String`. Haystack will be a little more complicated. But you want to reuse the logic in your search method.  
-You want to search in directories, files (search in file contents), collections, and even in google. Also, the user should be able to give multiple  haystacks, each with different priority : )  
-Here both the search criteria and the haystacks can be prioritized.   
-Also search results are a bit more complicated. The user of your search should be able to tell which result came from which haystack.  
-
-Example: when on your android phone you search for something in the 'google' widget, it gives you a multitude of results of different kinds. If you play with the search widget, you will see that what they do is similiar to what we want to do here.
-
-Implement the task, (with a haystack or two or three) and create a demonstration of it.
- 
+###### Additional: Implement a simple undo-redo.
+Now imagine User1 has made a bad choice. He now wants to undo his choice and User2 is OK with that. 
+If a user enters "u", it means 'undo' - the game must revert its previous state - the board just as it was before player 1 has made his bad choice. 
+Also, it is also his turn again : )
+If a user enters "r", it means 'redo' - the user now wants to undo his undo - resulting in a 'redo' operation.
+Design an 'Undo-Redo' solution. You may or may not use the classical [Memento](http://en.wikipedia.org/wiki/Memento_pattern) solution to this problem.	
+If you are into it, you can use the [Command pattern](http://gamedevelopment.tutsplus.com/tutorials/let-your-players-undo-their-in-game-mistakes-with-the-command-pattern--gamedev-1391) for this undo redo, but I personally don't recommend that for this task.
  
 
- 
+##### Additional: A new game
+If a user presses 'n', a new game instance is launched.
+
+
+##### Additional: Implement a simple save-load mechanism
+When the user decides he wants to quit, don't lose his game forever. Save it to a location with a format of your choosing. You can use binary format + [serialization](http://www.tutorialspoint.com/java/java_serialization.htm)   
+When launching the game, if the user has a save, restore it.
+
 
 

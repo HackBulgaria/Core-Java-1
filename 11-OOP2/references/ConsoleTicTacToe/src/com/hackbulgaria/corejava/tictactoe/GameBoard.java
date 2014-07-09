@@ -1,5 +1,6 @@
 package com.hackbulgaria.corejava.tictactoe;
 
+
 public final class GameBoard {
 	public static final int BOARD_LENGTH = 3;
 
@@ -8,22 +9,47 @@ public final class GameBoard {
 
 	private static final int UNSET = -1;
 
-	private final int[][] board;
 	private int currentPlayer = PLAYER_1;
 
+	private final int[][] board;
+
 	public GameBoard() {
-		this.board = new int[BOARD_LENGTH][BOARD_LENGTH];
+		this.board = (new int[BOARD_LENGTH][BOARD_LENGTH]);
 		for (int y = 0; y < BOARD_LENGTH; y++) {
 			for (int x = 0; x < BOARD_LENGTH; x++) {
-				board[y][x] = UNSET;
+				getBoard()[y][x] = UNSET;
 			}
 		}
 	}
 
 	public GameState play(UserInput input) {
-		if (canPlace(input.getPoint().y, input.getPoint().x)) {
-			board[input.getPoint().y][input.getPoint().x] = currentPlayer;
+		switch (input.getType()) {
+		case NORMAL:
+			return doPlay(input);
+		case UNDO:
+			return undo(input);
+		case REDO:
+			return redo(input);
+		default:
+			return GameState.PLAYING;
+		}
+	}
 
+	private GameState redo(UserInput input) {
+		// nooope, you' ll write this one yourself
+		return GameState.PLAYING;
+	}
+
+	private GameState undo(UserInput input) {
+		// nooope, you' ll write this one yourself
+		return GameState.PLAYING;
+	}
+
+	private GameState doPlay(UserInput input) {
+		if (canPlace(input.getPoint().y, input.getPoint().x)) {
+
+			getBoard()[input.getPoint().y][input.getPoint().x] = currentPlayer;
+			
 			GameState gameState = fetchGameState();
 			if (gameState == GameState.PLAYING) {
 				switchPlayers();
@@ -36,10 +62,10 @@ public final class GameBoard {
 	private GameState fetchGameState() {
 		// check rows
 		for (int y = 0; y < BOARD_LENGTH; y++) {
-			int first = board[y][0];
+			int first = getBoard()[y][0];
 			boolean allInRowAreSame = true;
 			for (int x = 1; x < BOARD_LENGTH; x++) {
-				allInRowAreSame &= (board[y][x] != UNSET && board[y][x] == first);
+				allInRowAreSame &= (getBoard()[y][x] != UNSET && getBoard()[y][x] == first);
 			}
 			if (allInRowAreSame) {
 				return chooseWinner(first);
@@ -48,10 +74,10 @@ public final class GameBoard {
 
 		// check cols
 		for (int x = 0; x < BOARD_LENGTH; x++) {
-			int first = board[0][x];
+			int first = getBoard()[0][x];
 			boolean allInColAreSame = true;
 			for (int y = 1; y < BOARD_LENGTH; y++) {
-				allInColAreSame &= (board[y][x] != UNSET && board[y][x] == first);
+				allInColAreSame &= (getBoard()[y][x] != UNSET && getBoard()[y][x] == first);
 			}
 			if (allInColAreSame) {
 				return chooseWinner(first);
@@ -59,13 +85,13 @@ public final class GameBoard {
 		}
 
 		// check diagonals
-		int firstOnD1 = board[0][0];
-		int firstOnD2 = board[0][BOARD_LENGTH - 1];
+		int firstOnD1 = getBoard()[0][0];
+		int firstOnD2 = getBoard()[0][BOARD_LENGTH - 1];
 		boolean d1AreAllTheSame = true;
 		boolean d2AreAllTheSame = true;
 		for (int d = 0; d < BOARD_LENGTH; d++) {
-			d1AreAllTheSame &= (board[d][d] != UNSET && board[d][d] == firstOnD1);
-			d2AreAllTheSame &= (board[d][BOARD_LENGTH - 1 - d] != UNSET && board[d][BOARD_LENGTH - 1 - d] == firstOnD2);
+			d1AreAllTheSame &= (getBoard()[d][d] != UNSET && getBoard()[d][d] == firstOnD1);
+			d2AreAllTheSame &= (getBoard()[d][BOARD_LENGTH - 1 - d] != UNSET && getBoard()[d][BOARD_LENGTH - 1 - d] == firstOnD2);
 		}
 		if (d1AreAllTheSame) {
 			return chooseWinner(firstOnD1);
@@ -108,14 +134,18 @@ public final class GameBoard {
 	}
 
 	public boolean isOwnedByP1(int y, int x) {
-		return board[y][x] == PLAYER_1;
+		return getBoard()[y][x] == PLAYER_1;
 	}
 
 	public boolean isOwnedByP2(int y, int x) {
-		return board[y][x] == PLAYER_2;
+		return getBoard()[y][x] == PLAYER_2;
 	}
 
 	public boolean isEmpty(int y, int x) {
-		return board[y][x] == UNSET;
+		return getBoard()[y][x] == UNSET;
+	}
+
+	public int[][] getBoard() {
+		return board;
 	}
 }

@@ -11,7 +11,9 @@ The minimal requirements:
 - Otherwise, the game board should be printed before every move.
 - If a user inputs **q**, the game should **exit immediately**.
 - We are very likely to add other features to the game, and more complex user input is likely to follow.  
-Some hints and tips:  
+
+###### Some hints and tips:  
+
 - Core game logic should **not** be in the **main** method!
 - Distinguish game/board **visualization** from **game logic**.
 - User keyboard input and error handling logic **must** be separated from **game logic**. Design your game so that a Swing (window-based) visualization can be easily added later on **with as few in-class modifications as possible**
