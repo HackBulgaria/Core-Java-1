@@ -10,7 +10,7 @@ The minimal requirements:
 - If the game is a tie, "It's a draw!" text should be seen on the screen.
 - Otherwise, the game board should be printed before every move.
 - If a user inputs **q**, the game should **exit immediately**.
-- We are very likely to add other features to the game, and more complex user input is likely to follow.
+- We are very likely to add other features to the game, and more complex user input is likely to follow.  
 Some hints and tips:  
 - Core game logic should **not** be in the **main** method!
 - Distinguish game/board **visualization** from **game logic**.
