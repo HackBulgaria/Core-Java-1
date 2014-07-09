@@ -122,13 +122,33 @@ Here are some predefined prioritization criteria you will need to implement and 
 The **priorities** given above are just for the example. The user of your class should be able to use any your predefined criteria, as well as **his own criteria**, and **define the priorities himself**.
 
 
-#### Design a TicTacToe game (Pair Programming)
-Design (classes and code-flow) for a TicTacToe game.
-Some hints:  
-- How will the user enter his input (assume console)?
-- How will he quit the game? How will this be separated from the core game logic?
-- Where will you keep the state of the game?
-Write a pseudocode for the main method and core components of the TicTacToe game. Implementation is not mandatory.
+#### Design (edit: and implement!) a TicTacToe game (Pair Programming)
+First, design (classes and code-flow) for a TicTacToe game. Do not start implementing until you have a very clear picture. Read the requirements below: 
+
+- Game is played by two people - User1 and User2. They take turns - first enters user A, after that - user B.
+- Users input its move via console like this: "0 1" // first row, second column.
+- If a user enters wrong/invalid input, it is his turn again.
+- If a user enters "quit", the game should exit immediately.
+Some hints and tips:  
+- Core game logic should **not** be in the **main** method!
+- Distinguish game/board **visualization** from Core Game Logic.
+- User input and error handling logic **must** be separated from Core Game logic.
+- Make sure the game supports **different visualizations**. Handling user input/input errors is coupled with visualization.
+- Implement the game only on the console. Use 'X' for player 1, and 'O' for player 2. (Or use swing, if you feel up to it). 
+- Design your game so that a Swing (window-based) visualization can be easily added later on **with as few in-class modifications as possible**
+- Use good naming conventions, make your code presentable.
+- Matrices are usually easier to visualize by both developer and users when using an y-first approach.
+```
+1 2 3 
+4 5 6
+
+input: 1 2 //row 1, col 2 => 6
+```
+
+
+###### Additional: Implement undo-redo.
+Now imagine User1 has made a bad choice. He now wants to undo his choice and User2 is OK with that.
+Design an 'Undo-Redo' solution. Think about how will 
 
 #### Design a 'CarRental' service
 Cars can be Audi, BMW, Opel, WolkSWAGen, etc. They can also be Sedans or SUVs. Sedan's have an optional 'sports package' **extra**, adding extra horse power. SUV's have an optional **extra** - 1 more passenger seat. 
