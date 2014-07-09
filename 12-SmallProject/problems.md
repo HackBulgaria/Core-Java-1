@@ -17,7 +17,6 @@ The minimal requirements:
 - Core game logic should **not** be in the **main** method!
 - Distinguish game/board **visualization** from **game logic**.
 - User keyboard input and error handling logic **must** be separated from **game logic**. Design your game so that a Swing (window-based) visualization can be easily added later on **with as few in-class modifications as possible**
-- Design the game in order to support **different visualizations**. Imagine we would like to add a GUI visualization later. 
 - Implement the game only on the console. Use 'X' for player 1, and 'O' for player 2. (Or use swing for GUI, if you feel up to it). 
 - Use good naming conventions, make your code presentable.
 - Matrices are usually easier to visualize by both developer and users when using an y-first approach.
