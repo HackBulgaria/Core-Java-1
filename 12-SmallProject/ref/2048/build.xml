@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!-- Configuration of the Ant build system to generate a Jar file -->
+<project name="TestMain" default="CreateJar">
+	<target name="CreateJar" description="Create Jar file">
+		<jar jarfile="/home/georgi/Desktop/2048.jar" basedir="/home/georgi/Dev/workspace/2048/bin" includes="**/**.class">
+			<manifest>
+				<attribute name="Main-Class" value="com.hackbulgaria.corejava.game2048.Main" />
+			</manifest>
+			<zipfileset excludes="META-INF/*.SF" src="/home/georgi/Dev/workspace/2048/libs/jline-1.0.jar" />
+		</jar>
+	</target>
+</project>
