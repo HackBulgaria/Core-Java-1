@@ -60,8 +60,8 @@ What happens when you try to do the same, but with a .gif file instead?
 
 ##### Send and receive files
 Just adding to our fantasy protocol:
-- In **RBI-Client** if the user writes **rbi-send <path-to-file>** the client writes: `<[?!FILENAME?!]>name-of-the-file\n`, gets the file, encodes it in **Base64** format, of course using [Apache Base64](http://commons.apache.org/proper/commons-codec/apidocs/org/apache/commons/codec/binary/Base64.html), and writes it to a **newline**. After that, the client adds `<[!?EOM?!]>` on a newline.
-- In **RBI-Server** if the server sees a `<[?!FILENAME?!]>` command, it parses it until it sees **end-of-line** symbol, decodes the following BASE64-file using Apache's Base64 library, and saves it to a file in `/home/<username>/.RBI/files/file-name` 
+- In **RBI-Client** if the user writes **rbi-send <path-to-file>** the client writes: `<[?!FILENAME?!]>name-of-the-file\n`, gets the file and writes it to the outputstream, after that adding a **newline**. After that, the client adds `<[!?EOM?!]>` on a newline.
+- In **RBI-Server** if the server sees a `<[?!FILENAME?!]>` command, it parses it until it sees **end-of-line** symbol, gets all the bytes until it sees a newline. Saves it to a file in `/home/<username>/.RBI/files/file-name` 
 
 
 ##### Implement a simple 'login' procedure as a part of the RBI protocol
@@ -76,9 +76,3 @@ hash:MyHash
 - If the server decides **not to** accept the connection, the server writes **Unathorized.\n401** and **closes** the socket.
 - If the server decides to accept the connection, the server writes **OK.\n200**.
 
-##### Implement BASE64 compression in the protocol
-Base64 compression saves around ~80% of the traffic.
-
-##### Implement encrypting in the protocol
-//You need to have login implemented for this feature.
-//As you will have a user, the user will have a password. Create a hash from that password using `MessageDigester`. Add a little hardcoded password `salt` before hashing.
