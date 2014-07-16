@@ -3,7 +3,7 @@
 Print your own IP address in HackBulgaria's wireless network, using the classes `NetworkInterface`, and `InetAddress`.
 See http://docs.oracle.com/javase/tutorial/networking/nifs/listing.html for help.
 
-Your netowrk interface is the one that **is up** and **is not a loopback interface** and **is not a virtual interface**.
+Your netowоrk interface is the one that **is up** and **is not a loopback interface** and **is not a virtual interface**.
 If you have more than 1 network interface with those criteria, use the one your internet connection comes from. For example, if you have `wlan0` and `eth0` both connected, but the HackBulgaria network is set at the `wlan0`, pick the `wlan0` device using `getName()` method  
 
 ### Find all available hosts in your network
