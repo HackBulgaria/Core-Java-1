@@ -54,7 +54,7 @@ Hints and tips:
  
 
 ##### You are done? Excellent
-Can you the client-server application you've just build in order to **stream the ascii ART representation** of a picture located on your partner's laptop? Use the ASCII art jar you built in the previous sessions.  
+Can you make the client-server application you've just build in order to **stream the ascii ART representation** of a picture located on your partner's laptop? Use the ASCII art jar you built in the previous sessions.  
 
 What happens when you try to do the same, but with a .gif file instead?
 
