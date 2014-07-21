@@ -37,3 +37,12 @@ Hints/tips:
 ```
 - **If you are not comfortable with even using something as ugly as regular expressions, you can do it with regular string matching. It will be harder though :(**
 - Use small websites for testing. For example, http://ebusiness.free.bg is one site you can use. It has very, very few links. (Search for the word 'Револвираща'.)
+
+### Get/print all the people that have signed for more than 1 course at Hack Bulgaria.
+Some people have signed for Core Java.  
+Some people have signed for Front-end Javascript.  
+Some people have signed for Angular-JS.   
+
+They are people that have signed for more than one course.  
+Using the https://hackbulgaria.com/api/students/ API, the [Jettison library](http://jettison.codehaus.org/) and [Apache HttpClient](http://hc.apache.org/httpclient-3.x/tutorial.html), consume the REST service given and print out all the people, who have signed for more that 1 course. 
+ 
