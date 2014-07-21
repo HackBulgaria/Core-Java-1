@@ -46,3 +46,15 @@ Some people have signed for Angular-JS.
 They are people that have signed for more than one course.  
 Using the https://hackbulgaria.com/api/students/ API, the [Jettison library](http://jettison.codehaus.org/) and [Apache HttpClient](http://hc.apache.org/httpclient-3.x/tutorial.html), consume the REST service given and print out all the people, who have signed for more that 1 course. 
  
+
+##### Addendum: Print out the people with the most visits.
+See, whenever you visit HackBulgaria and use our WiFi, your MAC addresses get logged. If you have 'filled the forms' when registering at the HackBulgaria website, you can now see  who has been coming and who hasn't been coming to the lectures.  
+
+```
+{"date": "2014-06-05", "student_id": 35, "student_courses": [{"group": 1, "name": "Frontend JavaScript"}], "student_name": "Светимир Игнатов"}
+```
+
+Using https://hackbulgaria.com/api/checkins/, the [Jettison library](http://jettison.codehaus.org/) and [Apache HttpClient](http://hc.apache.org/httpclient-3.x/tutorial.html), consume the REST service given and print out pairs of String-Integer, where the key (String) is the name of a Person, and the value (Integer) is the number of times he was at HackBulgaria. Sort the pairs when printing - people with more checkins should come before people with less checkins.
+
+
+ 
