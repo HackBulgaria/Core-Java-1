@@ -37,3 +37,11 @@ Hints:
 - Add both jars in the WEB-INF/lib folder. Don't do anything after that, Eclipse will automatically add them to the project's build path.  
 - Use this ROME tutorial: http://blog.manishchhabra.com/2011/10/rome-library-example-for-parsing-rss-and-atom-feeds/  
   
+
+### Simple JSON pretty printer service.
+Just look at the JSON at http://hackbulgaria.com/api/checkins . It is horrible - completely unreadable. What are the elements? What are the JSON objects? You cannot easily tell.
+
+- Deploy a servlet, that accepts a named "POST" parameter "json". 
+- Read the json as a POST parameter given to the request (as a parameter from the `HttpServletRequest` via the `getParameter` method.)
+- Use google gson to pretty-print the json given.
+- See how to it here:  http://stackoverflow.com/questions/4105795/pretty-print-json-in-java
