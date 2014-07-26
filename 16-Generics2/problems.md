@@ -22,7 +22,7 @@ System.out.println(box.get()); //=>3
 
 
 Box<String> box = new Box<>("this example belongs to Oracle");
-System.out.prinln(box.get()) //"this example belongs to  Oracle"
+System.out.println(box.get()) //"this example belongs to  Oracle"
 ```
 
 Demonstrate the usage of the class you wrote in a main method, setting an `Integer`, a `String`, and a `List<String>` list to the box.
