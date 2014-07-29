@@ -22,7 +22,7 @@ System.out.println(box.get()); //=>3
 
 
 Box<String> box = new Box<>("this example belongs to Oracle");
-System.out.prinln(box.get()) //"this example belongs to  Oracle"
+System.out.println(box.get()) //"this example belongs to  Oracle"
 ```
 
 Demonstrate the usage of the class you wrote in a main method, setting an `Integer`, a `String`, and a `List<String>` list to the box.
@@ -81,13 +81,15 @@ List<Number> nowWhat = YourClass.<Number> asList(null,null,null);
 
 ###6. Write a class NaturalNumber that works with Integer, Short or Long
 ```java
-NaturalNumber<Long> n1 = new NaturalNumber(12341541L);
-NaturalNumber<Integer> n2 = new NaturalNumber(123);
-NaturalNumber<Short> n3 = new NaturalNumber((short) 122);
+NaturalNumber<Long> n1 = new NaturalNumber<>(12341541L);
+NaturalNumber<Integer> n2 = new NaturalNumber<>(123);
+NaturalNumber<Short> n3 = new NaturalNumber<>((short) 122);
 
 System.out.println(n1.isEven()); //false;
 System.out.println(n2.isEven()); //false;
 System.out.println(n3.isEven()); //true;
+
+NaturalNumber<String> n4 = new NaturalNumber<>("1231516"); //compile-time error!
 ```
 Use a combination of wildcards(?), and the `Number` class to make the above functionality work. Check out `Number`'s methods : )
 
