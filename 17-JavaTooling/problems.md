@@ -31,7 +31,7 @@ Else, just click on the red button in the'Servers' view.
 
 -Start your tomcat using `startup.sh` or `startup.bat` in the `<your-tomcat-dir>/bin/` folder.
 
--Go to http://localhost:8080 . Do you see the cat? You need to see the cat.
+-Go to http://localhost:8080 . Do you see the cat? You need to see the cat.  
 -Now take a look at http://localhost:8080/examples/
 
 -Take a note - if you let eclipse manage your tomcat, you won't see neither a cat nor examples.
