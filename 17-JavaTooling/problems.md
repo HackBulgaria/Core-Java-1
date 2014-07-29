@@ -29,6 +29,12 @@ Else, just click on the red button in the'Servers' view.
 -Go to your tomcat installation directory. For me, it was `/home/georgi/Dev/tomcat/`
 -Do an `ls` and notify me when you get there. 
 
+- `tomcat/bin` => All the binaries for tomcat. If you need to start or stop tomcat, there are the binaries you need.
+- `tomcat/conf` => All the configuration files for tomcat. tomcat-user.xml and others
+- `tomcat/webapps` => The most important folder of all. You must delpoy your web applications here. 'Deploying' means copying one .war file to your webapps dir.
+
+One web application = one .war file. It's like a .jar file, but it means 'webarchive' (.war).
+
 -Start your tomcat using `startup.sh` or `startup.bat` in the `<your-tomcat-dir>/bin/` folder.
 
 -Go to http://localhost:8080 . Do you see the cat? You need to see the cat.  
