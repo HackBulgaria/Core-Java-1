@@ -67,7 +67,7 @@ Your goal here: every time you make a change on your project, executing `mvn ins
 - 2) You can use a simple maven-anttask-plugin. See http://www.itcuties.com/tools/maven-3-deploy-war-package/ (test results with `mvn install`)
 - 3) 1) is the harder route, but it's the better route. You'll learn more by doing 1). If it's half an hour until the end of the session, better choose 2)
 
-11) If you've done 1), there is one more step. You can see your war being deployed by doing `mvn clean tomcat7:deploy`. But we want this to happen only on `mvn install`. 
+11) If you've done 1), there is one more step. You can see your war being deployed by doing `mvn clean tomcat:deploy`. But we want this to happen only on `mvn install`. 
 Follow http://www.avajava.com/tutorials/lessons/how-do-i-attach-a-plugin-goal-to-a-particular-phase-of-a-maven-lifecycle.html to **invoke a goal on a phase**.
 
 ### Extra
