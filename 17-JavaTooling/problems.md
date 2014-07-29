@@ -36,7 +36,7 @@ Else, just click on the red button in the'Servers' view.
 
 -Take a note - if you let eclipse manage your tomcat, you won't see neither a cat nor examples.
 
--Edit the tomcat-users.xml file in `your-tomcat-dir/conf`. See the commented lines and add *2 roles* one with a `rollname="manager"` and the other with a `rollname="manager-gui"`.
+-Edit the tomcat-users.xml file in `your-tomcat-dir/conf`. See the commented lines and add *2 roles* one with a `rolеname="manager"` and the other with a `rolеname="manager-gui"`.
 -Create a user with username "a" and password "a" with the role of "manager-gui"
 -Create a user with username "test" and password "test" with the role of "manager"
 -Save tomcat-users.xml
