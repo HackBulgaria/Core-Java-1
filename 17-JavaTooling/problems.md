@@ -29,14 +29,20 @@ Else, just click on the red button in the'Servers' view.
 -Go to your tomcat installation directory. For me, it was `/home/georgi/Dev/tomcat/`
 -Do an `ls` and notify me when you get there. 
 
+- `tomcat/bin` => All the binaries for tomcat. If you need to start or stop tomcat, there are the binaries you need.
+- `tomcat/conf` => All the configuration files for tomcat. tomcat-user.xml and others
+- `tomcat/webapps` => The most important folder of all. You must delpoy your web applications here. 'Deploying' means copying one .war file to your webapps dir.
+
+One web application = one .war file. It's like a .jar file, but it means 'webarchive' (.war).
+
 -Start your tomcat using `startup.sh` or `startup.bat` in the `<your-tomcat-dir>/bin/` folder.
 
--Go to http://localhost:8080 . Do you see the cat? You need to see the cat.
+-Go to http://localhost:8080 . Do you see the cat? You need to see the cat.  
 -Now take a look at http://localhost:8080/examples/
 
 -Take a note - if you let eclipse manage your tomcat, you won't see neither a cat nor examples.
 
--Edit the tomcat-users.xml file in `your-tomcat-dir/conf`. See the commented lines and add *2 roles* one with a `rollname="manager"` and the other with a `rollname="manager-gui"`.
+-Edit the tomcat-users.xml file in `your-tomcat-dir/conf`. See the commented lines and add *2 roles* one with a `rolеname="manager"` and the other with a `rolеname="manager-gui"`.
 -Create a user with username "a" and password "a" with the role of "manager-gui"
 -Create a user with username "test" and password "test" with the role of "manager"
 -Save tomcat-users.xml
@@ -67,7 +73,7 @@ Your goal here: every time you make a change on your project, executing `mvn ins
 - 2) You can use a simple maven-anttask-plugin. See http://www.itcuties.com/tools/maven-3-deploy-war-package/ (test results with `mvn install`)
 - 3) 1) is the harder route, but it's the better route. You'll learn more by doing 1). If it's half an hour until the end of the session, better choose 2)
 
-11) If you've done 1), there is one more step. You can see your war being deployed by doing `mvn clean tomcat7:deploy`. But we want this to happen only on `mvn install`. 
+11) If you've done 1), there is one more step. You can see your war being deployed by doing `mvn clean tomcat:deploy`. But we want this to happen only on `mvn install`. 
 Follow http://www.avajava.com/tutorials/lessons/how-do-i-attach-a-plugin-goal-to-a-particular-phase-of-a-maven-lifecycle.html to **invoke a goal on a phase**.
 
 ### Extra
