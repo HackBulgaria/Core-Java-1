@@ -24,3 +24,6 @@ There is a bottleneck in it - while you are waiting for an answer from the serve
 Now, if you were to make several requests at once, it would be better.
 
 Try to crawl 9gag.com, for instance, and print every page you've visited. See the speed is not that great.
+Introduce paralelisation in your problem.
+
+If your web crawler project is not working, use the one in this github folder instead. (It's a Maven project, you will need to fetch all dependencies).
