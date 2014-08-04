@@ -28,3 +28,7 @@ The scenario we want is the following:
 - Works (increments the integer) 
 - Then calls `notify` on the monitor 
 - Which fires the Thread B, which does the same 
+
+
+### Implement a simple blocking queue.
+A blocking queue is just like a regular queue, with the difference that if someone calls `poll()` and the queue is empty, the call is blocked until somebody adds an element to the queue. After an element is added, the caller (the one who called `poll()`) gets unblocked and the `poll()` call returns.
