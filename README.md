@@ -12,8 +12,11 @@ If you have never programmed before, this is a not a course for you. If you want
 
 
 ### About this repo
-Every folder in the repo starting with a number contains links/problems/materials about a specific subject/theme/area. 
-They are usually named named `problems.md` - for the tasks you need to solve, `pre.md` - for the prereading you should do **beforehand**, and `materials.md` if you'd likely need to use the links/resources *while solving tasks from* `problems.md` .  
+Every folder in the repo starting with a number contains links/problems/materials about a specific subject/theme/area.   
+They are usually named named:
+- `problems.md` - for the tasks you need to solve
+- `pre.md` - for the prereading you should do **beforehand**
+- `materials.md` if you'd likely need to use the links/resources *while solving tasks from* `problems.md` .  
 
 ### Outline
 
