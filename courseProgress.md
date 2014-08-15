@@ -1,24 +1,23 @@
 - ~~Java, javac, jar, PATH, classpath, Java's ecosystem~~
 - ~~IDE's, Eclipse, Hello World~~
-- Linking and using libraries from Eclipse
+- ~~Linking and using libraries from Eclipse~~
 - ~~Debugging (level 1)~~
 - Debugging (level 2)
 - ~~Working with unit tests~~
 - ~~Writing unit tests~~
 - ~~OOP (level 1)~~
-- OOP (level 2)
+- ~~OOP (level 2)~~
 - OOP (level 3)
 - ~~Collections and generics (level 1)~~
-- Collections and generics (level 2)
-- Working with Files
-- Defensive Programming
-- Working with XML and JSON
-- Network Programming
-- Multithreaded Programming
+- ~~Collections and generics (level 2)~~
+- ~~Working with Files~~
+- ~~Defensive Programming~~
+- ~~Working with XML and JSON~~
+- ~~Network Programming~~
+- ~~Multithreaded Programming~~
 - Working with annotations
 - Ant
-- Maven
-- Declaring annotations
+- ~~Maven~~
 - Regular Expressions
 - Advanced IDE usages Level 1
 - Advanced IDE usages Level 2
